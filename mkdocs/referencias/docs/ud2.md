@@ -6,7 +6,7 @@ hide:
 # UD2 - JavaScript fundamentals
 
 <center>
-![](assets/ud2/ud2-basics.jpg)
+![](assets/ud2/ud2-basics.webp)
 </center>
 
 Como referencia de para esta unidad se ha tomado el material de la [certificación algoritmos de javascript y estructuras de datos](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/) de freeCodeCamp. En concreto los siguientes apartados del mismo:

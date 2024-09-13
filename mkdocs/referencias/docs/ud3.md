@@ -6,7 +6,7 @@ hide:
 # UD3 - User-Defined Structures
 
 <center>
-![](assets/ud3/ud3-estructuras.jpg)
+![](assets/ud3/ud3-estructuras.webp)
 </center>
 
 Como referencia de para esta unidad se ha tomado el material de la [certificación algoritmos de javascript y estructuras de datos](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/) de freeCodeCamp. 

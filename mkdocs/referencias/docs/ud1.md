@@ -21,4 +21,4 @@ En esta unidad, los estudiantes pondrán en práctica esta capacidad, investigan
 El objetivo de esta unidad es desarrollar la capacidad de investigación y selección de tecnologías en el ámbito del desarrollo web. A lo largo de la investigación, los estudiantes evaluarán y compararán diferentes enfoques, lenguajes y herramientas, tomando en cuenta tanto las ventajas como las desventajas de cada opción. Esto les permitirá realizar decisiones fundamentadas para sus proyectos futuros.
 
 
-Para comenzar a trabajar en esta unidad, debes dirigirte al **Proyecto 1**, donde pondrás en práctica la investigación, análisis y selección de tecnologías web en un entorno realista.
+Para comenzar a trabajar en esta unidad, debes dirigirte al **Proyecto 1**, donde pondrás en práctica la investigación, análisis y selección de tecnologías web en un entorno realista. Puedes encontrar el enlace al proyecto en Moodle Centros, en la pestaña **UD1**.
