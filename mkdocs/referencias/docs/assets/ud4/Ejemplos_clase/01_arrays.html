@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays</title>
+
+        <script>
+            // Declaración
+            let arr1    = []; // Array vacío
+            let arr2    = new Array(); // Array vacío
+            let items   = [1,2]; // Array con elementos
+            let str     = "Cadena"; // Cadena de caracteres, similar a un array
+            let frutas  = ["Manzana", "Melón", "Platano"]; // Array con elementos
+            let mix     = ["Sandía", 0, false, function(){alert("Array mix!");}];
+
+            // Acceso
+            alert(frutas[0]); // Manzana
+            alert(frutas[1]); // Melón
+            alert(frutas[2]); // Platano
+
+            // Mostrar un array completo
+            console.log(mix);
+
+            // Ejecutar una función dentro de un array
+            mix[3]();
+
+            // imprimir arrays => toString
+            console.log(items);
+            console.log(String(items)); // 1,2
+            console.log(String(items) === "1,2"); // true
+
+            // == en arrays
+            console.log([] == []);   // false, porque son arrays diferentes
+            console.log([0] == [0]); // false, porque son arrays diferentes
+            console.log(0 == []);    // true, caso extraño por la conversión de tipos
+            console.log('0' == []);  // false
+
+            // Dados 2 arrays
+            let array1 = [1, 8, 3, 6];
+            let array2 = [1, 8, 3, 6];
+
+            console.log( (array1 == array2) ? "Iguales" : "Distintos" ); // Distintos
+            console.log( (array1 === array2) ? "Iguales" : "Distintos" ); // Distintos
+
+            res = true; // Iguales a no ser que se demuestre lo contrario!
+            for(let i=0 ; i<array1.length ; i++){
+                if(array1[i] !== array2[i]){
+                    res = false;
+                    break;
+                }
+            }
+
+            console.log( (res) ? "Iguales" : "Distintos" ); // Iguales
+
+        </script>
+    </head>
+    <body>
+        <h1>Arrays</h1>
+    </body>
+</html>
+

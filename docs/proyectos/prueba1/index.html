@@ -1,0 +1,997 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/logo-blanco.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Prueba práctica 1: Fundamentos de Javascript - DWEC - Proyectos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prueba-practica-1-fundamentos-de-javascript" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="DWEC - Proyectos" class="md-header__button md-logo" aria-label="DWEC - Proyectos" data-md-component="logo">
+      
+  <img src="../assets/logo-blanco.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DWEC - Proyectos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prueba práctica 1: Fundamentos de Javascript
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto1/" class="md-tabs__link">
+        
+  
+    
+  
+  Proyecto 1
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto2/" class="md-tabs__link">
+        
+  
+    
+  
+  Proyecto 2
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto3/" class="md-tabs__link">
+        
+  
+    
+  
+  Proyecto 3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto4/" class="md-tabs__link">
+        
+  
+    
+  
+  Proyecto 4
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto6/" class="md-tabs__link">
+        
+  
+    
+  
+  Proyecto 6
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DWEC - Proyectos" class="md-nav__button md-logo" aria-label="DWEC - Proyectos" data-md-component="logo">
+      
+  <img src="../assets/logo-blanco.svg" alt="logo">
+
+    </a>
+    DWEC - Proyectos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descripción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 4
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importante
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluacion-de-la-prueba" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluación de la prueba
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluación de la prueba">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterio-2a-seleccion-del-lenguaje-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 2a) Selección del lenguaje de programación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-2b-uso-de-variables-y-operadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 2b) Uso de variables y operadores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-2c-identificacion-de-ambitos-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 2c) Identificación de ámbitos de variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-2d-conversiones-entre-tipos-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 2d) Conversiones entre tipos de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-2e-comentarios-en-el-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 2e) Comentarios en el código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-2f-mecanismos-de-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 2f) Mecanismos de decisión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-2g-uso-de-bucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 2g) Uso de bucles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-2h-uso-de-herramientas-y-entornos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 2h) Uso de herramientas y entornos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="prueba-practica-1-fundamentos-de-javascript">Prueba práctica 1: Fundamentos de Javascript</h1>
+<p><center>
+<img alt="" src="../assets/prueba1.jpeg" />
+</center></p>
+<h2 id="descripcion">Descripción</h2>
+<p>Las dos últimas unidades didácticas hemos estado viendo los fundamentos de javascript, es ese contenido el que tenemos que aplicar para resolver estos ejercicios:</p>
+<ul>
+<li>Tipos de datos</li>
+<li>Variables y ámbitos</li>
+<li>Operadores</li>
+<li>Arrays</li>
+<li>Funciones</li>
+<li>Estructuras de control</li>
+<li>Iteradores</li>
+<li>Clases y Objetos</li>
+</ul>
+<p>No olvides que normalmente tendrás que colaborar con un equipo en tu futuro puesto de trabajo, por lo que comentar el código es fundamental (incluso cuando los ejercicios se resuelvan 5 líneas). </p>
+<p>Por último, ten en cuenta que no está permitido la búsqueda en Google (o cualquier otro motor de búsquedas), si podrás consultar la documentación que hemos utilizado en clase:</p>
+<ul>
+<li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/">Free Code Camp</a></li>
+<li><a href="https://es.javascript.info/">https:/es.javascript.info</a></li>
+<li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">https://developer.mozilla.org</a></li>
+<li><a href="https://lenguajejs.com/javascript/">https://lenguajejs.com/javascript/</a></li>
+</ul>
+<h3 id="ejercicio-1">Ejercicio 1</h3>
+<p>El cálculo de la letra del Documento Nacional de Identidad (DNI) es un proceso matemático sencillo que se basa en obtener el resto de la división entera del número de DNI y el número 23.
+A partir del resto de la división, se obtiene la letra seleccionándola dentro de un array de letras:</p>
+<pre><code>['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E']
+</code></pre>
+<p>Por tanto si el resto de la división es 0, la letra del DNI es la T y si el resto es 3 la letra es la A.</p>
+<p>Con estos datos, elaborar un pequeño script que:</p>
+<ul>
+<li>
+<p>Pida al usuario un número de DNI.</p>
+</li>
+<li>
+<p>Almacene en una variable el número indicado por el usuario en tiempo de ejecución.</p>
+</li>
+<li>
+<p>Compruebe si es un número de DNI válido:</p>
+<ul>
+<li>En el caso de no ser válido, mostrará un mensaje al usuario indicando que el número proporcionado no es válido y el script no muestra más mensajes.</li>
+<li>Si el número es válido, se calcula la letra que le corresponde según el método explicado anteriormente, y una vez calculada la letra, mostrará por pantalla el DNI completo con la letra.</li>
+</ul>
+</li>
+</ul>
+<h3 id="ejercicio-2">Ejercicio 2</h3>
+<p>Cómo todos sabemos los números pares son aquellos que son múltiplos de dos, por ejemplo, 2, 4, 6, 8, 10, 12, …  Implementar una función “findPairs()” con los datos que se proporcionan a continuación: </p>
+<ul>
+<li>Debe aceptar como argumento dos números entre 1 y 100.</li>
+<li>Debe realizar las siguientes validaciones de la entrada:</li>
+<li>Si alguno de los argumentos que se pasan no es un número, muestra un mensaje al usuario indicando que el número proporcionado no es válido y el script no muestra más mensajes.</li>
+<li>Si recibe un número decimal, debe pasarlo a entero. Es decir, ante la entrada (2.4, 10), debe de considerarla (2,10).</li>
+<li>Debe comprobar si los argumentos recibidos son menor que 1 o mayor que 100. Si ese es el caso, se muestra un mensaje al usuario indicando que el número proporcionado no es válido y se corta la ejecución.</li>
+<li>Si los argumentos que recibe son válidos, se calcularán los números pares que hay entre los dos números pasados a la función y se introducirán en un array.</li>
+<li>Una vez calculados debe mostrar por pantalla todos los números pares separados por coma.</li>
+</ul>
+<h3 id="ejercicio-3">Ejercicio 3</h3>
+<p>La empresa Alberti’s Enternainment S.L. está trabajando en un juego de zombies. Necesita generar una estructura de datos para representar a los jugadores. El juego aún está en versión alfa, por lo que no tenemos que preocuparnos por el encapsulamiento de la información, todo lo contrario, cuanto más simple sea esta estructura, mejor.</p>
+<p>La estructura de datos en esta fase del juego será la de un objeto, en el que se necesitará de cada jugador las siguientes propiedades:</p>
+<ul>
+<li>Nombre</li>
+<li>Apellidos</li>
+<li>Nivel (comenzará en 1)</li>
+<li>Puntuación (comenzará en 1)</li>
+</ul>
+<p>Además, para hacer pruebas se almacenarán los jugadores en un array. Inicialmente habrá 2 jugadores precargados en el sistema.</p>
+<p>Se deberá crear un control de puntuación. Para ello se desarrollarán los métodos correspondientes para:</p>
+<ul>
+<li>sumarPuntuacion =&gt; Cada vez que se elimine a un zombie, se sumará 1 a la puntuación y cada 10 puntos conseguidos subirá de nivel.</li>
+<li>restarPuntuacion =&gt; Cada vez que un zombie alcance al jugador, restará 1 a la puntuación y cada 10 puntos perdidos, bajará de nivel. Si la puntuación llega a 0, reseteará al jugador.</li>
+<li>resetearPuntuacion =&gt; Cada vez que un jugador sea eliminado de la partida, mostrará una alerta indicando qué jugador se ha reseteado.</li>
+</ul>
+<h3 id="ejercicio-4">Ejercicio 4</h3>
+<p>Indica, para cada ejercicio, las herramientas que has utilizado para cada caso:</p>
+<ul>
+<li>Escribir el código</li>
+<li>Probar el código</li>
+<li>Depurar el código</li>
+</ul>
+<h2 id="entrega">Entrega</h2>
+<p>En Moodle Centros, abre la tarea llamada “Prueba 1 y entrega sus soluciones con la siguiente estructura y nombres:</p>
+<ul>
+<li>
+<p>Ejercicio 1
+e1-Apellido1Apellido2-Nombre.js
+e1-Apellido1Apellido2-Nombre.html</p>
+</li>
+<li>
+<p>Ejercicio 2
+e2-Apellido1Apellido2-Nombre.js
+e2-Apellido1Apellido2-Nombre.html</p>
+</li>
+<li>
+<p>Ejercicio 3
+e3-Apellido1Apellido2-Nombre.js
+e3-Apellido1Apellido2-Nombre.html</p>
+</li>
+<li>
+<p>Ejercicio 4
+e4-Apellido1Apellido2-Nombre.txt</p>
+</li>
+</ul>
+<p>NOTA: No comprimas las soluciones, la entrega permite adjuntar directamente tus ejercicios.</p>
+<h2 id="importante">Importante</h2>
+<ul>
+<li>Si los ejercicios no se ejecutan, no se procederá a la corrección de los mismos.</li>
+<li>Si los ejercicios no siguen la estructura y/o nombres indicados, no se procederá a la corrección de los mismos.</li>
+<li>Si se detecta plagio o copia entre compañeros/-as, la calificación será de 0 puntos en todas las partes de las que se compone el trabajo para ambos/-as.</li>
+<li>Igualmente, si se detecta plagio o copia de internet, la calificación será de 0 puntos en todas las partes de la que se compone el trabajo.</li>
+<li>Si alguna de las partes es entregada fuera de plazo no se procederá a la corrección de la misma.</li>
+</ul>
+<h2 id="evaluacion-de-la-prueba">Evaluación de la prueba</h2>
+<p>Mediante esta prueba se evalúan los siguientes criterios de evaluación:</p>
+<h3 id="criterio-2a-seleccion-del-lenguaje-de-programacion">Criterio 2a) Selección del lenguaje de programación</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Indicador</strong></th>
+<th style="text-align: center;"><strong>Excelente</strong></th>
+<th style="text-align: center;"><strong>Aceptable</strong></th>
+<th style="text-align: center;"><strong>Insatisfactorio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Selección del Lenguaje (0.5pt)</strong></td>
+<td style="text-align: center;">Se ha seleccionado un lenguaje de programación de clientes Web en función de sus posibilidades y se ha justificado la elección (0.5pt)</td>
+<td style="text-align: center;">Se ha seleccionado un lenguaje de programación apropiado, pero la justificación es parcial (0.25pt)</td>
+<td style="text-align: center;">No se ha seleccionado un lenguaje de programación adecuado o no se ha proporcionado justificación (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="criterio-2b-uso-de-variables-y-operadores">Criterio 2b) Uso de variables y operadores</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Indicador</strong></th>
+<th style="text-align: center;"><strong>Excelente</strong></th>
+<th style="text-align: center;"><strong>Aceptable</strong></th>
+<th style="text-align: center;"><strong>Insatisfactorio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Uso de Variables y Operadores (1pt)</strong></td>
+<td style="text-align: center;">Se ha utilizado adecuadamente variables y operadores, demostrando un sólido entendimiento (1pt)</td>
+<td style="text-align: center;">Se ha utilizado variables y operadores de manera correcta, pero podría mejorar su uso (0.5pt)</td>
+<td style="text-align: center;">Se han cometido errores significativos en el uso de variables y operadores (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="criterio-2c-identificacion-de-ambitos-de-variables">Criterio 2c) Identificación de ámbitos de variables</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Indicador</strong></th>
+<th style="text-align: center;"><strong>Excelente</strong></th>
+<th style="text-align: center;"><strong>Aceptable</strong></th>
+<th style="text-align: center;"><strong>Insatisfactorio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Identificación de Ámbitos (2pt)</strong></td>
+<td style="text-align: center;">Se ha identificado y explicado de manera clara los ámbitos de variables (2pt)</td>
+<td style="text-align: center;">Se ha identificado ámbitos de variables, pero la explicación es parcial o confusa (1pt)</td>
+<td style="text-align: center;">No se ha identificado adecuadamente los ámbitos de las variables (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="criterio-2d-conversiones-entre-tipos-de-datos">Criterio 2d) Conversiones entre tipos de datos</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Indicador</strong></th>
+<th style="text-align: center;"><strong>Excelente</strong></th>
+<th style="text-align: center;"><strong>Aceptable</strong></th>
+<th style="text-align: center;"><strong>Insatisfactorio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Conversiones entre Tipos de Datos (2pt)</strong></td>
+<td style="text-align: center;">Se ha identificado y explicado las conversiones entre tipos de datos de manera precisa (2pt)</td>
+<td style="text-align: center;">Se ha identificado conversiones entre tipos de datos, pero la explicación es parcial o poco clara (1pt)</td>
+<td style="text-align: center;">No se ha identificado adecuadamente las conversiones entre tipos de datos (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="criterio-2e-comentarios-en-el-codigo">Criterio 2e) Comentarios en el código</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Indicador</strong></th>
+<th style="text-align: center;"><strong>Excelente</strong></th>
+<th style="text-align: center;"><strong>Aceptable</strong></th>
+<th style="text-align: center;"><strong>Insatisfactorio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Uso de Comentarios (2pt)</strong></td>
+<td style="text-align: center;">Se han agregado comentarios de manera efectiva y coherente al código (2pt)</td>
+<td style="text-align: center;">Se han utilizado comentarios, pero podrían ser más detallados o coherentes (1pt)</td>
+<td style="text-align: center;">Se han utilizado pocos o ningún comentario en el código (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="criterio-2f-mecanismos-de-decision">Criterio 2f) Mecanismos de decisión</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Indicador</strong></th>
+<th style="text-align: center;"><strong>Excelente</strong></th>
+<th style="text-align: center;"><strong>Aceptable</strong></th>
+<th style="text-align: center;"><strong>Insatisfactorio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Uso de Mecanismos de Decisión (1pt)</strong></td>
+<td style="text-align: center;">Se ha aplicado mecanismos de decisión de manera efectiva y lógica en el código (1pt)</td>
+<td style="text-align: center;">Se ha utilizado mecanismos de decisión, pero podría mejorar su lógica (0.5pt)</td>
+<td style="text-align: center;">No se ha aplicado adecuadamente mecanismos de decisión (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="criterio-2g-uso-de-bucles">Criterio 2g) Uso de bucles</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Indicador</strong></th>
+<th style="text-align: center;"><strong>Excelente</strong></th>
+<th style="text-align: center;"><strong>Aceptable</strong></th>
+<th style="text-align: center;"><strong>Insatisfactorio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Uso de Bucles (2pt)</strong></td>
+<td style="text-align: center;">Se ha utilizado bucles de manera efectiva y lógica en el código (2pt)</td>
+<td style="text-align: center;">Se ha utilizado bucles, pero podría mejorar su lógica (1pt)</td>
+<td style="text-align: center;">No se ha aplicado adecuadamente bucles (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="criterio-2h-uso-de-herramientas-y-entornos">Criterio 2h) Uso de herramientas y entornos</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Indicador</strong></th>
+<th style="text-align: center;"><strong>Excelente</strong></th>
+<th style="text-align: center;"><strong>Aceptable</strong></th>
+<th style="text-align: center;"><strong>Insatisfactorio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Uso de Herramientas y Entornos (0.5pt)</strong></td>
+<td style="text-align: center;">Se ha utilizado herramientas y entornos de programación de manera efectiva y adecuada (0.5pt)</td>
+<td style="text-align: center;">Se ha utilizado herramientas y entornos, pero podría mejorar su uso (0.25pt)</td>
+<td style="text-align: center;">No se ha utilizado adecuadamente herramientas y entornos (0pt)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenido generado por el equipo educativo de ciberseguridad del IES Rafael Alberti
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/IESAlbertiCadiz" target="_blank" rel="noopener" title="IES Rafael Alberti en Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

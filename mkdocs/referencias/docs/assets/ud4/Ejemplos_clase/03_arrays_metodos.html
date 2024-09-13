@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays: métodos</title>
+
+        <script>
+            let frutas = ["Manzana", "Pera", "Naranja"];
+
+            // Al FINAL del array
+            console.log(frutas.pop()); // Naranja
+            console.log(frutas); // Manzana y pera
+
+            frutas.push("Fresa");
+            console.log(frutas); // Manzana, pera y fresa
+
+            // Al PRINCIPIO del array
+            console.log(frutas.shift()); // Manzana
+            console.log(frutas); // Pera y fresa
+
+            frutas.unshift("Mandarina");
+            console.log(frutas); // Mandarina, pera y fresa
+
+            // Push y shift pueden agregar varios elementos a la vez
+            frutas.unshift("Sandía", "Cereza");
+            frutas.push("Melocotón", "Sandía");
+            console.log(frutas);
+
+            // Splice
+            let frase = ["Desarrollo", "Web", "en", "Entorno", "Cliente"];
+            console.log(String(frase));
+            String(frase.splice(1, 1)); // (1) Desde la posición 1, eliminamos 1 elemento1
+            console.log(String(frase));
+            String(frase.splice(1, 1, "web", "en", "un")); // (1) Desde la posición 1, eliminamos 1 elemento y añadimos 3
+            console.log(String(frase));
+            String(frase.splice(0, 4)); // (3) Eliminamos los 4 primeros elementos
+            console.log(String(frase)); 
+
+            // Slice
+            let palabra = ["C", "l", "i", "e", "n", "t", "e"];
+            console.log(String(palabra));
+            let subpalabra = palabra.slice(2, 6); // Elementos 2, 3, 4, 5 y 6
+            console.log(String(subpalabra))
+
+            // Concat
+            let array = [1, 2];
+            array_concatenado = array.concat(
+                [3, 4],
+                [5, 6, 7, 8, 9],
+                [0],
+                "a",
+                "b", 
+                "c"
+                );
+
+            console.log(String(array_concatenado));
+        </script>
+    </head>
+    <body>
+        <h1>Arrays: métodos</h1>
+    </body>
+</html>
+

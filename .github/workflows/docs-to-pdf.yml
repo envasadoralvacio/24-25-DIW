@@ -1,0 +1,56 @@
+name: docs-to-pdf
+
+on:
+  # Si quieres elegir cuándo lanzarlo, comenta las líneas push y siguientes y descomenta la línea a continuación:
+  # workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/*'
+
+jobs:
+
+  list-files:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v2
+      - id: set-matrix
+        run: echo "::set-output name=matrix::$(ls docs/*.md | sed -e 's/docs\/\(.*\).md/\1/' | jq -R -s -c 'split("\n")[:-1]' )"
+  
+  converts_via_md_to_pdf:
+    needs: list-files
+    runs-on: ubuntu-18.04
+    
+    strategy:
+        # Este es el número de trabajos en paralelo que se va a hacer. Más de uno puede provocar conflictos en los commits.
+        max-parallel: 1
+        matrix:
+            # Si quieres pasar a PDF solamente unos documentos en concreto, comenta la siguiente línea
+          md: ${{ fromJson(needs.list-files.outputs.matrix) }}
+            # Y descomenta la siguiente, indicando el listado de nombres de los archivos .md que quieres convertir
+        # md: [proyecto1,proyecto2,proyecto3]
+    
+    steps:
+      - uses: actions/checkout@v2.3.4
+        
+      - name: Create "/docs/pdf" directory
+        run: mkdir docs/pdf && sudo chmod 777 docs/pdf
+      
+      - name: Build book with md-to-pdf
+        run: |-
+          npm install -g md-to-pdf
+          cd docs
+          echo; echo "Generating PDF";
+          cat ${{ matrix.md }}.md | md-to-pdf --stylesheet "css/modest.css" --pdf-options '{ "format": "a4", "margin": "40mm 40mm", "printBackground": true, "preferCSSPageSize": true }' > pdf/${{ matrix.md }}.pdf
+          # Puedes modificar las opciones del PDF en --pdf-options
+          
+      - name: Deploy to branch exports
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/pdf
+          publish_branch: exports
+          keep_files: true

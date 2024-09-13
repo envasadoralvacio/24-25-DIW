@@ -1,0 +1,2072 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ud5.10.2-React.lazy/">
+      
+      
+        <link rel="next" href="../ud5.12-React%2BFirebase/">
+      
+      
+      <link rel="icon" href="../assets/logo-blanco.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Context API - DWEC - Apuntes y referencias</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#context-api" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="DWEC - Apuntes y referencias" class="md-header__button md-logo" aria-label="DWEC - Apuntes y referencias" data-md-component="logo">
+      
+  <img src="../assets/logo-blanco.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DWEC - Apuntes y referencias
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Context API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud1/" class="md-tabs__link">
+        
+  
+    
+  
+  UD1
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud2/" class="md-tabs__link">
+        
+  
+    
+  
+  UD2
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud3/" class="md-tabs__link">
+        
+  
+    
+  
+  UD3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud4/" class="md-tabs__link">
+        
+  
+    
+  
+  UD4
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ud5/" class="md-tabs__link">
+          
+  
+  UD5
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud6/" class="md-tabs__link">
+        
+  
+    
+  
+  UD6
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud7/" class="md-tabs__link">
+        
+  
+    
+  
+  UD7
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ud8/" class="md-tabs__link">
+          
+  
+  UD8
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DWEC - Apuntes y referencias" class="md-nav__button md-logo" aria-label="DWEC - Apuntes y referencias" data-md-component="logo">
+      
+  <img src="../assets/logo-blanco.svg" alt="logo">
+
+    </a>
+    DWEC - Apuntes y referencias
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD5
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UD5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - React.js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.1-Empezando-con-React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empezando con React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.2-Paso-a-paso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paso a paso con React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.3-Tres-en-raya/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Juego tres en raya
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.4-Mi-Primer-Proyecto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mi primer proyecto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.5-Fundamentos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentos de React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.6-Formularios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.7-Todo-App/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Todo App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.8-Drag-and-Drop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drag & Drop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.9-useEffect-fetch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UseEffect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.10-React-Router/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React Router DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.10.2-React.lazy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lazy Load
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Context API
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Context API
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-utilizar-context-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Por qué utilizar Context API?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-comunes-para-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso Comunes para Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendimiento-y-optimizacion-con-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendimiento y Optimización con Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-usar-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cómo usar Context?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Cómo usar Context?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reactcreatecontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      React.createContext
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provider
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usecontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      useContext
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-uso-de-context-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de uso de context API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo de uso de context API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreateContext
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provider_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provider
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navbar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Private Routes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracion-con-apis-externas-y-manejo-de-efectos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integración con APIs Externas y Manejo de Efectos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternativas-a-context-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternativas a Context API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.12-React%2BFirebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React con Firebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.13-Patrones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patrones de Diseño
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.14-Refuerzo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material de Refuerzo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.15-Ampliacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material de Ampliación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD8
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            UD8
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD8 - Vue.js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.1-Paso-a-paso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paso a paso con Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.2-Fundamentos-Vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentos Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.3-Comenzar-proyecto-Vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comenzar un proyecto Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.4-Mi-Primer-Proyecto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mi primer proyecto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.5-Indecision_APP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indecision App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.6-Pokemon-Game/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pokemon Game
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.7-Vue-Router/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue Router
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.8-Vuex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vuex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.8.1-Pinnia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pinia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.9-Journal_APP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Journal App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.10-Vue-con-Firebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue con Firebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.11-Refuerzo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material de Refuerzo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.12-Ampliacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material de Ampliación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-utilizar-context-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Por qué utilizar Context API?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-comunes-para-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso Comunes para Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendimiento-y-optimizacion-con-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendimiento y Optimización con Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-usar-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cómo usar Context?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Cómo usar Context?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reactcreatecontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      React.createContext
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provider
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usecontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      useContext
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-uso-de-context-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de uso de context API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo de uso de context API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreateContext
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provider_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provider
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navbar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Private Routes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracion-con-apis-externas-y-manejo-de-efectos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integración con APIs Externas y Manejo de Efectos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternativas-a-context-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternativas a Context API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="context-api">Context API</h1>
+<p>En esta sección aprenderemos a trabajar con <a href="https://es.react.dev/reference/react/useContext">Context API</a>. Según React, Context API “proporciona una forma de pasar datos mediante el árbol de componentes sin pasar props manualmente a todos los niveles”.</p>
+<h2 id="por-que-utilizar-context-api">¿Por qué utilizar Context API?</h2>
+<p>En React normalmente se pasan los datos de padre a componente hijo, mediante propiedades (props). El problema es que esto, a veces, se vuelve insostenible cuando la aplicación crece. </p>
+<p>Context se diseñó con el objetivo de compartir datos considerados “globales” para un árbol de componentes de React. Algunos ejemplos en los que podría ser interesante su uso, por ejemplo, cuando tengamos en el árbol de componentes datos del usuario autenticado, la plantilla seleccionada, o el idioma preferido.</p>
+<p><center>
+<img alt="" src="../assets/ud5/context-props.png" />
+</center></p>
+<h2 id="casos-de-uso-comunes-para-context">Casos de Uso Comunes para Context</h2>
+<p>Algunos casos de uso en el que podemos aplicar la API de contexto:</p>
+<ul>
+<li><strong>Manejo de Temas</strong>: Utilizar Context para manejar temas claros y oscuros en toda la aplicación.</li>
+<li><strong>Autenticación de Usuario</strong>: Almacenar información del usuario autenticado y controlar el acceso a distintas partes de la aplicación.</li>
+<li><strong>Configuración de Idioma y Localización</strong>: Gestionar las preferencias de idioma y localización del usuario.</li>
+</ul>
+<h2 id="rendimiento-y-optimizacion-con-context">Rendimiento y Optimización con Context</h2>
+<ul>
+<li><strong>Rendimiento</strong>: Context puede causar renderizados innecesarios si no se utiliza cuidadosamente. Es importante comprender cuándo un componente necesita suscribirse a cambios de Context.</li>
+<li><strong>Optimización</strong>: Dividir Context en contextos más pequeños según la necesidad, y usar React.memo para evitar renderizados innecesarios en componentes consumidores.</li>
+</ul>
+<h2 id="como-usar-context">¿Cómo usar Context?</h2>
+<p>Context tiene las siguientes características y/o elementos principales:</p>
+<ul>
+<li>React.createContext</li>
+<li>Context.Provider</li>
+<li>Context.Consumer </li>
+</ul>
+<h3 id="reactcreatecontext">React.createContext</h3>
+<p>CreateContext crea un objeto Context. Cuando React renderiza un componente que se suscribe a este objeto Context, este leerá el valor de contexto actual del Provider más cercano en el árbol.
+Cada objeto Context viene con un componente Provider de React que permite que los componentes que lo consumen se suscriban a los cambios del contexto.</p>
+<pre><code>const MyContext = React.createContext()
+</code></pre>
+<h3 id="provider">Provider</h3>
+<p>Cada objeto Context viene con un componente <a href="https://es.react.dev/reference/react/useContext">Provider</a> de React que permite que los componentes que lo consumen se suscriban a los cambios del contexto.</p>
+<p>El componente Provider acepta una prop value que se pasará a los componentes consumidores que son descendientes de este Provider.</p>
+<pre><code>&lt;MyContext.Provider value={/* algún valor */}&gt;
+</code></pre>
+<h3 id="usecontext">useContext</h3>
+<p><a href="https://es.react.dev/reference/react/useContext">useContext</a> acepta un objeto de contexto (el valor devuelto de React.createContext) y devuelve el valor de contexto actual. El valor actual del contexto es determinado por la propiedad value del <MyContext.Provider> ascendentemente más cercano en el árbol al componente que hace la llamada.</p>
+<pre><code>const contextValue = React.MyContext()
+</code></pre>
+<p>Cuando el <MyContext.Provider> ascendentemente más cercano en el árbol se actualiza, el Hook activa una renderización con el value más reciente del contexto pasado a ese proveedor MyContext. </p>
+<p>El argumento enviado a useContext debe ser el objeto del contexto en sí mismo:</p>
+<ul>
+<li>Correcto: useContext(MyContext)</li>
+<li>Incorrecto: useContext(MyContext.Consumer)</li>
+<li>Incorrecto: useContext(MyContext.Provider)</li>
+</ul>
+<p>Un componente que llama a useContext siempre se volverá a renderizar cuando el valor del contexto cambie. </p>
+<h2 id="ejemplo-de-uso-de-context-api">Ejemplo de uso de context API</h2>
+<p>En la aplicación del ejempo vamos a necesitar crear un contexto user para que todos los elementos y páginas de la aplicación puedan saber si hay un usuario logueado o no, la información a mostrar no será la misma en ambos casos. Vamos a partir del siguiente <a href="../assets/codigo-react/template-context-router-6.4.zip">código base</a>.</p>
+<h3 id="createcontext">CreateContext</h3>
+<p>Lo primero que tenemos que hacer es crear el contexto, habitualmente cada contexto se almacena en un archivo independiente y se almacenan dentro de un directorio que suele nombrarse como contexts. Es conveniente darle al archivo un nombre descriptivo, en caso le llamaremos UserContext.</p>
+<p>context/UserContext.jsx</p>
+<pre><code>import { createContext, useContext } from &quot;react&quot;;
+
+// UserContext es el contexto que se crea. Este contexto eventualmente proporcionará y recibirá datos a/de los componentes que lo consuman.
+
+export const UserContext = createContext(false);
+</code></pre>
+<p>Una vez tenemos creado el contexto UserContext podemos acceder al valor de este desde cualquier parte de la aplicación. Disponemos para ello de un hook de React, useContext.</p>
+<p>components/Navbar.js</p>
+<pre><code>import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom'
+import { UserContext } from '../context/UserContext'
+
+const Navbar = () =&gt; {
+  console.log(useContext(UserContext))
+  return (
+    &lt;nav&gt;
+      &lt;NavLink to='/'&gt; Home &lt;/NavLink&gt; |
+      &lt;NavLink to='/dashboard'&gt; Dashboard &lt;/NavLink&gt;
+    &lt;/nav&gt;
+  )
+}
+
+export default Navbar
+</code></pre>
+<p>Como vemos, ya podemos acceder al contexto, pero eso probablemente no es suficiente, necesitaremos que los componentes puedan tambien modificar del contexto. Para ello vamos a almacenar el contexto creado en un estado y pasar a los componentes tanto el estado como su función modificadora. Para hacerlo vamos a usar un componente <a href="https://es.react.dev/reference/react/useContext#usecontext">Provider</a>.</p>
+<h3 id="provider_1">Provider</h3>
+<p>context/UserContext.jsx</p>
+<pre><code>import { createContext, useState } from 'react'
+
+export const UserContext = createContext()
+
+const UserProvider = ({ children }) =&gt; {
+  const [user, setUser] = useState(null)
+  return (
+    &lt;UserContext.Provider value={{ user, setUser }}&gt;
+      {children}
+    &lt;/UserContext.Provider&gt;
+  )
+}
+
+export default UserProvider
+</code></pre>
+<p>Vamos a analizar el código anterior:</p>
+<ul>
+<li>
+<p><em>UserProvider</em>: UserProvider es un componente que actúa como proveedor del contexto UserContext. Todo componente que necesite acceso al contexto debe estar dentro de este UserProvider.</p>
+</li>
+<li>
+<p><em>useState para Manejar el Estado</em>: Aquí se utiliza el Hook useState para crear un estado llamado user. Inicialmente, este estado está establecido en false. setUser es una función que permite actualizar este estado.</p>
+</li>
+<li>
+<p><em>Propagando el Contexto</em>: UserContext.Provider es un componente que hace que el valor del contexto ({ user, setUser }) esté disponible para todos los componentes hijos (denotados por {children}). Esto significa que cualquier componente dentro de UserProvider puede acceder al estado user y a la función setUser.</p>
+</li>
+<li>
+<p><em>Value del Provider</em>: El value del UserContext.Provider es un objeto que contiene el estado user y la función setUser. Cualquier componente que acceda a UserContext podrá obtener user y llamar a setUser para actualizarlo</p>
+</li>
+</ul>
+<p>main.jsx</p>
+<pre><code>import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { RouterProvider } from 'react-router-dom'
+import UserProvider from './context/UserContext'
+import { router } from './router'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  &lt;React.StrictMode&gt;
+    &lt;UserProvider&gt;
+      &lt;RouterProvider router={router} /&gt;
+    &lt;/UserProvider&gt;
+  &lt;/React.StrictMode&gt;
+)
+</code></pre>
+<p>Navbar.jsx</p>
+<pre><code>import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom'
+import { UserContext } from '../context/UserContext'
+
+const Navbar = () =&gt; {
+  console.log(useContext(UserContext)) // Podemos ver por consola que recibimos el objeto.
+  return (
+    &lt;nav&gt;
+      &lt;NavLink to='/'&gt; Home &lt;/NavLink&gt; |
+      &lt;NavLink to='/dashboard'&gt; Dashboard &lt;/NavLink&gt;
+    &lt;/nav&gt;
+  )
+}
+
+export default Navbar
+</code></pre>
+<p>Ahora vemos que ya recibimos un objeto con el user y su función modificadora setUser, de esta forma des cualquier componente podremos modificar el valor del mismo.</p>
+<p>Vamos a probarlo con el navbar:</p>
+<p>Navbar.jsx</p>
+<pre><code>import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom'
+import { UserContext } from '../context/UserContext'
+
+const Navbar = () =&gt; {
+  const { user, setUser } = useContext(UserContext)
+  return (
+    &lt;nav&gt;
+      &lt;NavLink to='/'&gt; Home &lt;/NavLink&gt; |
+          {user &amp;&amp; (
+            &lt;&gt;
+              &lt;NavLink to='/dashboard'&gt;
+                Dashboard
+              &lt;/NavLink&gt;
+              &lt;button onClick={() =&gt; setUser(null)}&gt;
+               Logout
+              &lt;/button&gt;
+            &lt;/&gt;
+          )}
+    &lt;/nav&gt;
+  )
+}
+
+export default Navbar
+</code></pre>
+<p><em>Home.jsx</em></p>
+<pre><code>import { useUserContext } from &quot;../context/UserContext&quot;;
+
+const Home = () =&gt; {
+  const { user, setUser } = useUserContext();
+
+  return (
+    &lt;&gt;
+      &lt;h1&gt;Home&lt;/h1&gt;
+      {!user &amp;&amp; (
+        &lt;button onClick={() =&gt; setUser({ name: &quot;Guillermo Ventanas&quot; })}&gt;Login&lt;/button&gt;
+      )}
+    &lt;/&gt;
+  );
+};
+
+export default Home;
+</code></pre>
+<h3 id="navbar">Navbar</h3>
+<p>Una vez tenemos el login funcionando, utilizaremos el contexto para mostrar en el navbar solo las opciones pertinentes en función de si hay un usuario logueado. Por ejemplo, la opción dashboard no se mostrará si el usuario no está logueago. </p>
+<pre><code>import React, { useContext } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { UserContext } from '../context/UserContext'
+
+const Navbar = () =&gt; {
+
+  const {user, setUser} = useContext(UserContext)
+  const navigate = useNavigate()
+
+  const closeSesion = () =&gt; {
+    setUser(false)
+    navigate(&quot;/&quot;)
+  }
+
+  const handleLogin = () =&gt; {
+    setUser(true)
+    navigate(&quot;/dashboard&quot;)
+  }
+
+  return (
+    &lt;nav&gt;
+        &lt;NavLink to =&quot;/&quot;&gt;Home |&lt;/NavLink&gt;
+      {
+        user?(
+          &lt;&gt;
+          &lt;NavLink to =&quot;/dashboard&quot;&gt;Dashboard&lt;/NavLink&gt;
+          &lt;button onClick={()=&gt; closeSesion()}&gt;Logout&lt;/button&gt;
+          &lt;/&gt;
+        ):(
+          &lt;button onClick={()=&gt; handleLogin()}&gt;Login&lt;/button&gt;
+        )
+      }
+    &lt;/nav&gt;
+  )
+}
+
+export default Navbar
+</code></pre>
+<h3 id="private-routes">Private Routes</h3>
+<p>Las rutas protegidas son rutas que solo se pueden acceder si el usuario está autenticado. Si el usuario no está autenticado, se redirige a la página de inicio de sesión. En la aplicación tenemos un LayoutPrivate, esto nos permite proteger mas facilmente todo lo que necesitemos, ya que protegiendo dicho Layout quedaría protegido todo las páginas que mostremos bajo este Layout.</p>
+<p><em>LayoutPrivate.jsx</em></p>
+<pre><code>import React, { useEffect, useContext} from 'react'
+import { Outlet, useNavigate } from 'react-router-dom'
+import { UserContext } from '../context/UserContext'
+
+const LayoutPrivate = () =&gt; {
+  const {user} = useContext(UserContext)
+  const navigate = useNavigate()
+
+  useEffect(() =&gt; {
+    if (!user) {
+      navigate('/login')
+    }
+  }, [user])
+
+  return (
+    &lt;div&gt;
+      LayoutPrivate
+      &lt;Outlet /&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default LayoutPrivate
+</code></pre>
+<p>Una alternativa sin useEffect:</p>
+<pre><code>import React, { useContext } from 'react'
+import { Navigate, Outlet } from 'react-router-dom'
+import { UserContext } from '../context/UserContext'
+
+const LayoutPrivate = () =&gt; {
+
+  const {user} = useContext(UserContext)
+
+  return ( 
+    &lt;&gt;
+      {
+        user? &lt;Outlet /&gt; : &lt;Navigate to =&quot;/&quot; /&gt;
+      }
+    &lt;/&gt;
+  )
+}
+
+export default LayoutPrivate
+</code></pre>
+<p><em>Dashboard.jsx</em></p>
+<pre><code>import React, { useContext } from 'react'
+import { UserContext } from '../context/UserContext'
+
+
+const Dashboard = () =&gt; {
+  const { user, setUser } = useContext(UserContext)
+
+  return (
+    &lt;&gt;
+      &lt;h1&gt;Dashboard&lt;/h1&gt;
+      &lt;p&gt;{user?.name}&lt;/p&gt;
+    &lt;/&gt;
+  );
+};
+
+export default Dashboard;
+</code></pre>
+<h2 id="integracion-con-apis-externas-y-manejo-de-efectos">Integración con APIs Externas y Manejo de Efectos</h2>
+<p>Ejemplo de cómo Context puede ser utilizado para manejar datos de APIs externas y cómo integrarlo con useEffect para operaciones asíncronas.</p>
+<pre><code>// Ejemplo: Uso de Context para gestionar datos de una API externa
+const DataContext = React.createContext();
+
+const DataProvider = ({ children }) =&gt; {
+  const [data, setData] = useState(null);
+
+  useEffect(() =&gt; {
+    fetchData().then(setData); // fetchData es una función que llama a una API externa
+  }, []);
+
+  return &lt;DataContext.Provider value={data}&gt;{children}&lt;/DataContext.Provider&gt;;
+};
+</code></pre>
+<p>De esta manera nos aseguramos que los componentes consumidores puedan acceder a los datos cargados de la API externa de manera eficiente y centralizada </p>
+<h2 id="alternativas-a-context-api">Alternativas a Context API</h2>
+<ul>
+<li>
+<p><strong>MobX</strong>: Una alternativa que ofrece una gestión de estado más automática y reactiva. MobX se centra en la gestión reactiva del estado a través de observables, lo que puede simplificar el manejo de estados complejos en aplicaciones grandes.</p>
+</li>
+<li>
+<p><strong>Recoil</strong>: Una biblioteca de gestión de estado de React más reciente, que proporciona una forma más atomizada y eficiente de manejar estados en aplicaciones grandes. Recoil permite manejar un estado global con un enfoque más granular, lo que puede ser beneficioso en aplicaciones con muchos estados interdependientes.</p>
+</li>
+<li>
+<p><strong>Zustand</strong>: Una biblioteca de gestión de estado minimalista y eficiente para React. Zustand destaca por su simplicidad y facilidad de uso, ofreciendo una solución liviana para la gestión de estados sin la complejidad adicional de Redux. Es especialmente útil en proyectos donde se desea una solución rápida y sencilla para manejar estados compartidos.</p>
+</li>
+<li>
+<p><strong>Redux</strong>: Redux es un “contenedor de estados” previsible y centralizado para aplicaciones de JavaScript. Nos proporciona un conjunto completo de herramientas para administrar el estado:</p>
+<ul>
+<li>Viene con un depurador que nos permite "viajar en el tiempo" (historial de acciones y ver cómo el estado de cada uno de esos momentos).</li>
+<li>Proporciona una API de middleware que le brinda acceso a herramientas como <a href="https://github.com/redux-saga/redux-saga/blob/main/README_es.md">redux-sagas</a>.</li>
+<li>Sus enlaces de React evitan muchos renderizados innecesarios.</li>
+<li>Como puede ver, el contexto no reemplaza a Redux. El contexto no le permitirá viajar en el tiempo con depuración, middleware configurable.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://npmtrends.com/context-vs-mobx-vs-recoil-vs-redux-vs-zustand">npmtrends; context vs mobx vs recoil vs redux vs zustand</a></p>
+</li>
+</ul>
+<h2 id="recursos">Recursos</h2>
+<ul>
+<li><a href="https://es.react.dev/reference/react/useContextl">Contex API</a></li>
+<li><a href="https://www.itdo.com/blog/react-context-api-puede-ser-alternativa-a-redux/">alternativa a redux</a></li>
+<li><a href="https://daveceddia.com/context-api-vs-redux/">context-api-vs-redux</a></li>
+<li><a href="https://frontarm.com/james-k-nelson/when-context-replaces-redux/">when context replaces redux</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenido generado por el equipo educativo de 2º DAW del IES Rafael Alberti
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/IESAlbertiCadiz" target="_blank" rel="noopener" title="IES Alberti en Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

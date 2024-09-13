@@ -1,0 +1,2573 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ud8.5-Indecision_APP/">
+      
+      
+        <link rel="next" href="../ud8.7-Vue-Router/">
+      
+      
+      <link rel="icon" href="../assets/logo-blanco.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Pokemon Game - DWEC - Apuntes y referencias</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pokemon-game" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="DWEC - Apuntes y referencias" class="md-header__button md-logo" aria-label="DWEC - Apuntes y referencias" data-md-component="logo">
+      
+  <img src="../assets/logo-blanco.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DWEC - Apuntes y referencias
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pokemon Game
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud1/" class="md-tabs__link">
+        
+  
+    
+  
+  UD1
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud2/" class="md-tabs__link">
+        
+  
+    
+  
+  UD2
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud3/" class="md-tabs__link">
+        
+  
+    
+  
+  UD3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud4/" class="md-tabs__link">
+        
+  
+    
+  
+  UD4
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ud5/" class="md-tabs__link">
+          
+  
+  UD5
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud6/" class="md-tabs__link">
+        
+  
+    
+  
+  UD6
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud7/" class="md-tabs__link">
+        
+  
+    
+  
+  UD7
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ud8/" class="md-tabs__link">
+          
+  
+  UD8
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DWEC - Apuntes y referencias" class="md-nav__button md-logo" aria-label="DWEC - Apuntes y referencias" data-md-component="logo">
+      
+  <img src="../assets/logo-blanco.svg" alt="logo">
+
+    </a>
+    DWEC - Apuntes y referencias
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD5
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UD5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - React.js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.1-Empezando-con-React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empezando con React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.2-Paso-a-paso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paso a paso con React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.3-Tres-en-raya/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Juego tres en raya
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.4-Mi-Primer-Proyecto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mi primer proyecto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.5-Fundamentos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentos de React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.6-Formularios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.7-Todo-App/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Todo App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.8-Drag-and-Drop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drag & Drop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.9-useEffect-fetch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UseEffect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.10-React-Router/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React Router DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.10.2-React.lazy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lazy Load
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.11-Context-API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.12-React%2BFirebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React con Firebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.13-Patrones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patrones de Diseño
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.14-Refuerzo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material de Refuerzo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5.15-Ampliacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material de Ampliación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD8
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            UD8
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD8 - Vue.js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.1-Paso-a-paso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paso a paso con Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.2-Fundamentos-Vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentos Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.3-Comenzar-proyecto-Vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comenzar un proyecto Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.4-Mi-Primer-Proyecto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mi primer proyecto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.5-Indecision_APP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indecision App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pokemon Game
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Pokemon Game
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#demo-del-objetivo-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demo del objetivo final
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-para-el-desarrollo-de-la-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos para el desarrollo de la App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicio-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicio del proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-proyecto-y-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura del proyecto y componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura del proyecto y componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pokemon-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pokemon Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pokemonpicturevue" class="md-nav__link">
+    <span class="md-ellipsis">
+      PokemonPicture.vue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pokemonoptionsvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      PokemonOptions.vue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diseno-de-los-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diseño de los componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diseño de los componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pokemonpicturevue_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PokemonPicture.vue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pokemonoptionsvue_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PokemonOptions.vue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionalidad-de-pokemonpicture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionalidad de PokemonPicture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logica-de-los-nombres-de-los-pokemons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lógica de los nombres de los pokémons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-nombres-de-los-4-pokemons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtener nombres de los 4 pokémons
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Obtener nombres de los 4 pokémons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#axios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Axios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mostrar-las-opciones-posibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar las opciones posibles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seleccionar-un-pokemon-aleatoriamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seleccionar un pokémon aleatoriamente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emit-emitir-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emit - Emitir eventos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultado-y-reinicio-de-juego" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado y reinicio de juego
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desplegar-nuestro-juego-en-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desplegar nuestro juego en producción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-fuente-de-la-seccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código fuente de la sección
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.7-Vue-Router/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue Router
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.8-Vuex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vuex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.8.1-Pinnia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pinia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.9-Journal_APP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Journal App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.10-Vue-con-Firebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue con Firebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.11-Refuerzo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material de Refuerzo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud8.12-Ampliacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material de Ampliación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#demo-del-objetivo-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demo del objetivo final
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-para-el-desarrollo-de-la-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos para el desarrollo de la App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicio-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicio del proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-proyecto-y-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura del proyecto y componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura del proyecto y componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pokemon-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pokemon Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pokemonpicturevue" class="md-nav__link">
+    <span class="md-ellipsis">
+      PokemonPicture.vue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pokemonoptionsvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      PokemonOptions.vue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diseno-de-los-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diseño de los componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diseño de los componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pokemonpicturevue_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PokemonPicture.vue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pokemonoptionsvue_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PokemonOptions.vue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionalidad-de-pokemonpicture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionalidad de PokemonPicture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logica-de-los-nombres-de-los-pokemons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lógica de los nombres de los pokémons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-nombres-de-los-4-pokemons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtener nombres de los 4 pokémons
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Obtener nombres de los 4 pokémons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#axios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Axios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mostrar-las-opciones-posibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar las opciones posibles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seleccionar-un-pokemon-aleatoriamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seleccionar un pokémon aleatoriamente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emit-emitir-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emit - Emitir eventos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultado-y-reinicio-de-juego" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado y reinicio de juego
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desplegar-nuestro-juego-en-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desplegar nuestro juego en producción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-fuente-de-la-seccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código fuente de la sección
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="pokemon-game">Pokemon Game</h1>
+<p>En esta sección vamos a desarrollar un juego de pokémon, "adivina que pokémon es". Mostraremos un pokémon difuminado, y cuatro opciones a elegir, y el usuario tendrá que adivinar cual es.</p>
+<p>El desarrollo del juego nos va a permitir aprender bastante sobre Vue y la comunicación entre componentes. El objetivo del desarrollo va a ser enfocarnos en:</p>
+<ul>
+<li>
+<p>Mount</p>
+</li>
+<li>
+<p>Axios en Vue.js</p>
+</li>
+<li>
+<p>Emitir eventos</p>
+</li>
+<li>
+<p>Escuchar eventos personalizados</p>
+</li>
+</ul>
+<h2 id="demo-del-objetivo-final">Demo del objetivo final</h2>
+<p>En el siguiente enlace podemos ver un despligue de como se verá la aplicación una vez terminada:</p>
+<ul>
+<li><a href="https://golden-blini-df8401.netlify.app/">Despliegue de Pokemosn Game</a></li>
+</ul>
+<h2 id="recursos-para-el-desarrollo-de-la-app">Recursos para el desarrollo de la App</h2>
+<p>Algunos recursos que vamos a necesitar:</p>
+<ul>
+<li><a href="https://axios-http.com/es/docs/intro">Axios</a></li>
+<li><a href="https://pokeapi.co/">Enlace a la API pokeapi</a></li>
+<li><a href="../assets/codigo-vue/Pokemon_css.zip">CSS para la aplicación</a></li>
+</ul>
+<h2 id="inicio-del-proyecto">Inicio del proyecto</h2>
+<p>Comenzamos un nuevo proyecto Vue utilizando vite.</p>
+<pre><code>npm init vue@latest
+</code></pre>
+<p>A continuación nos descargamos <a href="../assets/codigo-vue/Pokemon_css.zip">el zip con los arhivos css del proyecto</a>, añadimos los archivos animations.css y styles.css a la carpeta assets y los importamos en el main.js.</p>
+<p>main.js</p>
+<pre><code>import { createApp } from 'vue'
+import App from './App.vue'
+
+import './assets/styles.css'
+import './assets/animations.css'
+
+createApp(App).mount('#app')
+</code></pre>
+<p>Ya tenemos todo listo para comenzar a trabajar en nuestro juego.</p>
+<h2 id="estructura-del-proyecto-y-componentes">Estructura del proyecto y componentes</h2>
+<p>Cuando estamos trabajando con un proyecto grande no se recomienda usar la estructura de carpetas por defecto. A medida que el proyecto crece será mas complejo tener localizados y controlados los diferentes elementos de la aplicación.
+En ese caso se recomienda una estructura, como:</p>
+<p><center>
+<img alt="" src="../assets/ud8/estructura_recomendada.png" />
+</center></p>
+<p>La aplicación que vamos a desarrollar es relativamente sencilla, tendrá solo 3 o 4 componentes, y no nos va a hacer falta una estructura compleja. Aún así tampoco tendría sentido implementar toda la aplicación en el App.vue, la segmentación en componentes siempre la va a hacer mas fácil de leer y mantener.</p>
+<p>Vamos a utilizar la siguiente estructura:</p>
+<p><center>
+<img alt="" src="../assets/ud8/estructura_carpetas_pokemon.png" />
+</center></p>
+<p>Implementamos los componentes:</p>
+<h3 id="pokemon-page">Pokemon Page</h3>
+<p>Está será la página principal de la aplicación, aunque no vamos a usar el router y es nuestra única página está bien hacerla separada por si la aplicación crece y luego usamos un router.</p>
+<p>PokemonPage.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;¿Quien es este pokemon?&lt;/h1&gt;
+
+
+    &lt;!-- TODO: Componente para mostrar la imagen del pokemon --&gt;
+
+
+    &lt;!-- TODO: Componente para mostrar las opciones --&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;&lt;/script&gt;
+
+&lt;style&gt;&lt;/style&gt;
+</code></pre>
+<p>Lo mostramos en el App.vue:</p>
+<p>App.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;PokemonPage /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import PokemonPage from './pages/PokemonPage.vue'
+export default { components: { PokemonPage } }
+&lt;/script&gt;
+
+&lt;style&gt;&lt;/style&gt;
+</code></pre>
+<p>Nota. Añadimos a App.vue <a href="../assets/codigo-vue/Pokemon_css.zip">el css que tenemos en el archivo App.css (zip con los arhivos css del proyecto</a>.</p>
+<h3 id="pokemonpicturevue">PokemonPicture.vue</h3>
+<p>Este componente va a mostrar la imagen del pokemon que el usuario tiene que intentar adivinar.</p>
+<pre><code>&lt;template&gt;
+  &lt;h1&gt;Pokemon Picture&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {}
+&lt;/script&gt;
+
+&lt;style scoped&gt;&lt;/style&gt;
+</code></pre>
+<h3 id="pokemonoptionsvue">PokemonOptions.vue</h3>
+<p>Este componente tiene que mostrar una lista de pokemons para que el usuario elija la correcta.</p>
+<pre><code>&lt;template&gt;
+  &lt;h1&gt;Opciones&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {}
+&lt;/script&gt;
+
+&lt;style scoped&gt;&lt;/style&gt;
+</code></pre>
+<p>Mostramos ambos componentes en el PokemonPage.vue:</p>
+<p>PokemonPage.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;¿Quien es este pokemon?&lt;/h1&gt;
+
+    &lt;PokemonPicture /&gt;
+
+    &lt;PokemonOptions /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import PokemonOptions from '../components/PokemonOptions.vue'
+import PokemonPicture from '../components/PokemonPicture.vue'
+
+export default { components: { PokemonOptions, PokemonPicture } }
+&lt;/script&gt;
+
+&lt;style&gt;&lt;/style&gt;
+</code></pre>
+<h2 id="diseno-de-los-componentes">Diseño de los componentes</h2>
+<p>Vamos a realizar el diseño de los dos componentes, para posteriormente ya centrarnos en las funcionalidades.</p>
+<h3 id="pokemonpicturevue_1">PokemonPicture.vue</h3>
+<p>De momento estamos haciendo la estructura, vamos a hacer que muestre la <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg">imagen</a> de manera estática, y posteriormente la haremos dinámica. Le añadiremos tambien el css correspondiente.</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;pokemon-container&quot;&gt;
+    &lt;img
+      src=&quot;https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg&quot;
+      alt=&quot;pokemon&quot;
+      class=&quot;hidden-pokemon&quot; /&gt;
+    &lt;!-- &lt;img
+      src=&quot;https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg&quot;
+      alt=&quot;pokemon&quot;
+      class=&quot;fade-in&quot; /&gt; --&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {}
+&lt;/script&gt;
+
+&lt;style&gt;
+.pokemon-container {
+  height: 200px;
+  position: relative;
+}
+
+img {
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+
+  transform: translateX(-50%);
+}
+.hidden-pokemon {
+  filter: brightness(0);
+}
+&lt;/style&gt;
+</code></pre>
+<h3 id="pokemonoptionsvue_1">PokemonOptions.vue</h3>
+<p>En este componente vamos a implementar una lista con 4 elementos para posteriormente mostrar las opciones. Le añadiremos tambien el css correspondiente.</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;options-container&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;1&lt;/li&gt;
+      &lt;li&gt;1&lt;/li&gt;
+      &lt;li&gt;1&lt;/li&gt;
+      &lt;li&gt;1&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+ul {
+  list-style-type: none;
+}
+li {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 250px;
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.options-container {
+  display: flex;
+  justify-content: center;
+}
+&lt;/style&gt;
+</code></pre>
+<p>Nuestro proyecto se verá algo, como:</p>
+<p><center>
+<img alt="" src="../assets/ud8/estructura-inicial-pokemon-game.png" />
+</center></p>
+<p>Ya tenemos la estructura lista, ahora nos centraremos en la lógica de la aplicación.</p>
+<h2 id="funcionalidad-de-pokemonpicture">Funcionalidad de PokemonPicture</h2>
+<p>El componente tiene que recibir un pokemon, en concreto el id de un pokemon, y mostar la imagen de este.</p>
+<p>PokemonPicture.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;pokemon-container&quot;&gt;
+    &lt;img :src=&quot;imgSrc&quot; alt=&quot;pokemon&quot; class=&quot;hidden-pokemon&quot; /&gt;
+    &lt;img v-if=&quot;showPokemon&quot; :src=&quot;imgSrc&quot; alt=&quot;pokemon&quot; class=&quot;fade-in&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: {
+    pokemonId: {
+      type: Number,
+      required: true,
+    },
+    showPokemon: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+  },
+  computed: {
+    imgSrc() {
+      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`
+    },
+  },
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.pokemon-container {
+  height: 200px;
+  position: relative;
+}
+
+img {
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+
+  transform: translateX(-50%);
+}
+.hidden-pokemon {
+  filter: brightness(0);
+}
+&lt;/style&gt;
+</code></pre>
+<p>PokemonPage.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;¿Quien es este pokemon?&lt;/h1&gt;
+
+    &lt;PokemonPicture :pokemonId=&quot;151&quot; :showPokemon=&quot;false&quot; /&gt;
+
+    &lt;PokemonOptions /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import PokemonOptions from '../components/PokemonOptions.vue'
+import PokemonPicture from '../components/PokemonPicture.vue'
+
+export default { components: { PokemonOptions, PokemonPicture } }
+&lt;/script&gt;
+
+&lt;style&gt;&lt;/style&gt;
+</code></pre>
+<h2 id="logica-de-los-nombres-de-los-pokemons">Lógica de los nombres de los pokémons</h2>
+<p>El componente PokemonOptions debería de recibir un array con los 4 pokemons que tiene que mostrar en las opciones. Para evitar pomer toda la lógica en el componente PokemonPage vamos a crearnos una carpeta helpers y dentro un archivo getPokemonOptions.js.</p>
+<p>getPokemonOptions.js</p>
+<pre><code>const getPokemons = () =&gt; {
+  const pokemosArr = Array.from(Array(650))
+  return pokemosArr.map((arg, index) =&gt; index + 1)
+}
+
+const getPokemonOptions = () =&gt; {
+  const mixedPokemons = getPokemons().sort(() =&gt; Math.random() - 0.5)
+  getPokemonName(mixedPokemons.splice(0, 4))
+}
+
+const getPokemonName = ([a, b, c, d] = []) =&gt; {
+  console.log(a, b, c, d)
+}
+
+export default getPokemonOptions
+</code></pre>
+<p>PokemonPage.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;¿Quien es este pokemon?&lt;/h1&gt;
+
+    &lt;PokemonPicture :pokemonId=&quot;151&quot; :showPokemon=&quot;false&quot; /&gt;
+
+    &lt;PokemonOptions /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import PokemonOptions from '../components/PokemonOptions.vue'
+import PokemonPicture from '../components/PokemonPicture.vue'
+import getPokemonOptions from '@/helpers/getPokemonOptions'
+
+console.log(getPokemonOptions())
+
+export default { components: { PokemonOptions, PokemonPicture } }
+&lt;/script&gt;
+
+&lt;style&gt;&lt;/style&gt;
+</code></pre>
+<h2 id="obtener-nombres-de-los-4-pokemons">Obtener nombres de los 4 pokémons</h2>
+<p>Ya tenemos los id de los 4 pokemons que queremos mostrar, ahora tenemos que llamar a la API y obtener los datos de esos pokemons.</p>
+<h3 id="axios">Axios</h3>
+<p>Para hacer las peticiones vamos a usar axios, vamos a instalar la librería:</p>
+<pre><code>npm install axios
+</code></pre>
+<h3 id="http-request">HTTP request</h3>
+<p>Nos creamos una nueva carpeta que llamaremos "api", y un archivo pokemonAPI.js y en el haremos la configuración de axios.</p>
+<p>pokemonAPI.js</p>
+<pre><code>import axios from 'axios'
+
+const pokemonAPI = axios.create({
+  baseURL: 'https://pokeapi.co/api/v2/pokemon',
+})
+
+export default pokemonAPI
+</code></pre>
+<p>getPokemonOptions.js</p>
+<pre><code>import pokemonAPI from '../api/pokemonAPI'
+
+const getPokemons = () =&gt; {
+  const pokemosArr = Array.from(Array(650))
+  return pokemosArr.map((arg, index) =&gt; index + 1)
+}
+
+const getPokemonOptions = async () =&gt; {
+  const mixedPokemons = getPokemons().sort(() =&gt; Math.random() - 0.5)
+  const pokemons = await getPokemonNames(mixedPokemons.splice(0, 4))
+  return pokemons
+}
+
+const getPokemonNames = async ([a, b, c, d] = []) =&gt; {
+  const promiseArr = [
+    pokemonAPI.get(`/${a}`),
+    pokemonAPI.get(`/${b}`),
+    pokemonAPI.get(`/${c}`),
+    pokemonAPI.get(`/${d}`),
+  ]
+  const [pok1, pok2, pok3, pok4] = await Promise.all(promiseArr)
+  return [
+    { name: pok1.data.name, id: pok1.data.id },
+    { name: pok2.data.name, id: pok2.data.id },
+    { name: pok3.data.name, id: pok3.data.id },
+    { name: pok4.data.name, id: pok4.data.id },
+  ]
+}
+
+export default getPokemonOptions
+</code></pre>
+<h2 id="mostrar-las-opciones-posibles">Mostrar las opciones posibles</h2>
+<p>Una vez que ya hemos obtenido los datos de los 4 pokemons, vamos a pintar los nombres en las opciones.</p>
+<p>PokemonPage.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;¿Quien es este pokemon?&lt;/h1&gt;
+
+    &lt;PokemonPicture :pokemonId=&quot;151&quot; :showPokemon=&quot;false&quot; /&gt;
+
+    &lt;PokemonOptions :pokemons=&quot;pokemonsArr&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import PokemonOptions from '../components/PokemonOptions.vue'
+import PokemonPicture from '../components/PokemonPicture.vue'
+import getPokemonOptions from '@/helpers/getPokemonOptions'
+
+export default {
+  components: { PokemonOptions, PokemonPicture },
+  data() {
+    return {
+      pokemonsArr: [],
+    }
+  },
+  methods: {
+    async mixPokemonArray() {
+      this.pokemonsArr = await getPokemonOptions()
+    },
+  },
+  mounted() {
+    this.mixPokemonArray()
+  },
+}
+&lt;/script&gt;
+
+&lt;style&gt;&lt;/style&gt;
+</code></pre>
+<p>PokemonOptions.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;options-container&quot;&gt;
+    &lt;ul&gt;
+      &lt;li v-for=&quot;pokemon in pokemons&quot; :key=&quot;pokemon.id&quot;&gt;{{ pokemon.name }}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: {
+    pokemons: {
+      type: Array,
+      required: true,
+    },
+  },
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+ul {
+  list-style-type: none;
+}
+li {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 250px;
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.options-container {
+  display: flex;
+  justify-content: center;
+}
+&lt;/style&gt;
+</code></pre>
+<h2 id="seleccionar-un-pokemon-aleatoriamente">Seleccionar un pokémon aleatoriamente</h2>
+<p>Ya estamos mostrando los nombres de los pokemons, ahora tenemos que mostrar la imagen de uno de ellos.</p>
+<p>PokemonPage.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;h1 v-if=&quot;!pokemon&quot;&gt;Espere por favor...&lt;/h1&gt;
+  &lt;div v-else=&quot;pokemon&quot;&gt;
+    &lt;h1&gt;¿Quien es este pokemon?&lt;/h1&gt;
+
+    &lt;PokemonPicture :pokemonId=&quot;pokemon.id&quot; :showPokemon=&quot;false&quot; /&gt;
+
+    &lt;PokemonOptions :pokemons=&quot;pokemonsArr&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import PokemonOptions from '../components/PokemonOptions.vue'
+import PokemonPicture from '../components/PokemonPicture.vue'
+import getPokemonOptions from '@/helpers/getPokemonOptions'
+
+export default {
+  components: { PokemonOptions, PokemonPicture },
+  data() {
+    return {
+      pokemonsArr: [],
+      pokemon: null,
+    }
+  },
+  methods: {
+    async mixPokemonArray() {
+      this.pokemonsArr = await getPokemonOptions()
+      const rndInt = Math.floor(Math.random() * 4)
+      this.pokemon = this.pokemonsArr[rndInt]
+    },
+  },
+  mounted() {
+    this.mixPokemonArray()
+  },
+}
+&lt;/script&gt;
+
+&lt;style&gt;&lt;/style&gt;
+</code></pre>
+<p>Ahora vamos a hacer que e pokemon se "descubra" cuando el usuario haga click en una de las opciones.</p>
+<p>PokemonPage.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;h1 v-if=&quot;!pokemon&quot;&gt;Espere por favor...&lt;/h1&gt;
+  &lt;!-- &lt;div v-if=&quot;pokemon&quot;&gt; --&gt;
+  &lt;div v-else=&quot;pokemon&quot;&gt;
+    &lt;h1&gt;¿Quien es este pokemon?&lt;/h1&gt;
+
+    &lt;PokemonPicture :pokemonId=&quot;pokemon.id&quot; :showPokemon=&quot;showPokemon&quot; /&gt;
+
+    &lt;PokemonOptions :pokemons=&quot;pokemonsArr&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import PokemonOptions from '../components/PokemonOptions.vue'
+import PokemonPicture from '../components/PokemonPicture.vue'
+import getPokemonOptions from '@/helpers/getPokemonOptions'
+
+export default {
+  components: { PokemonOptions, PokemonPicture },
+  data() {
+    return {
+      pokemonsArr: [],
+      pokemon: null,
+      showPokemon: false,
+    }
+  },
+  methods: {
+    async mixPokemonArray() {
+      this.pokemonsArr = await getPokemonOptions()
+      const rndInt = Math.floor(Math.random() * 4)
+      this.pokemon = this.pokemonsArr[rndInt]
+    },
+  },
+  mounted() {
+    this.mixPokemonArray()
+  },
+}
+&lt;/script&gt;
+
+&lt;style&gt;&lt;/style&gt;
+</code></pre>
+<h2 id="emit-emitir-eventos">Emit - Emitir eventos</h2>
+<p>En este apartado tenemo que hacer que el componente hijo opciones "emita" cual es la opción en la que el usuario ha hecho click. Para ello vamos a hacer uso de los <a href="https://v2.vuejs.org/v2/guide/components-custom-events.html">custom events</a> de vue.</p>
+<p>PokemonOptions.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;options-container&quot;&gt;
+    &lt;ul&gt;
+      &lt;li
+        v-for=&quot;pokemon in pokemons&quot;
+        :key=&quot;pokemon.id&quot;
+        @click=&quot;$emit('selection', pokemon.id)&quot;&gt;
+        {{ pokemon.name }}
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: {
+    pokemons: {
+      type: Array,
+      required: true,
+    },
+  },
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+ul {
+  list-style-type: none;
+}
+li {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 250px;
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.options-container {
+  display: flex;
+  justify-content: center;
+}
+&lt;/style&gt;
+</code></pre>
+<p>PokemonPage.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;h1 v-if=&quot;!pokemon&quot;&gt;Espere por favor...&lt;/h1&gt;
+  &lt;div v-else=&quot;pokemon&quot;&gt;
+    &lt;h1&gt;¿Quien es este pokemon?&lt;/h1&gt;
+
+    &lt;PokemonPicture :pokemonId=&quot;pokemon.id&quot; :showPokemon=&quot;showPokemon&quot; /&gt;
+
+    &lt;PokemonOptions :pokemons=&quot;pokemonsArr&quot; @selection=&quot;checkAnswer&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import PokemonOptions from '../components/PokemonOptions.vue'
+import PokemonPicture from '../components/PokemonPicture.vue'
+import getPokemonOptions from '@/helpers/getPokemonOptions'
+
+export default {
+  components: { PokemonOptions, PokemonPicture },
+  data() {
+    return {
+      pokemonsArr: [],
+      pokemon: null,
+      showPokemon: false,
+    }
+  },
+  methods: {
+    async mixPokemonArray() {
+      this.pokemonsArr = await getPokemonOptions()
+      const rndInt = Math.floor(Math.random() * 4)
+      this.pokemon = this.pokemonsArr[rndInt]
+    },
+    checkAnswer(selectedId) {
+      console.log(pokemonId)
+      this.showPokemon = true
+    },
+  },
+  mounted() {
+    this.mixPokemonArray()
+  },
+}
+&lt;/script&gt;
+
+&lt;style&gt;&lt;/style&gt;
+</code></pre>
+<h2 id="resultado-y-reinicio-de-juego">Resultado y reinicio de juego</h2>
+<p>Ya estamos finalizando el proyecto, nos faltan los últimos detalles. Por ejemplo, que muestre un mensaje cuando el usuario acierta o falla.</p>
+<p>PokemonOptions.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;h1 v-if=&quot;!pokemon&quot;&gt;Espere por favor...&lt;/h1&gt;
+  &lt;div v-else=&quot;pokemon&quot;&gt;
+    &lt;h1&gt;¿Quien es este pokemon?&lt;/h1&gt;
+
+    &lt;PokemonPicture :pokemonId=&quot;pokemon.id&quot; :showPokemon=&quot;showPokemon&quot; /&gt;
+
+    &lt;PokemonOptions :pokemons=&quot;pokemonsArr&quot; @selection=&quot;checkAnswer&quot; /&gt;
+
+    &lt;template v-if=&quot;showAnswer&quot;&gt;
+      &lt;h2 class=&quot;fade-in&quot;&gt;{{ message }}&lt;/h2&gt;
+      &lt;button @click=&quot;newGame&quot;&gt;Jugar de nuevo&lt;/button&gt;
+    &lt;/template&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import PokemonOptions from '../components/PokemonOptions.vue'
+import PokemonPicture from '../components/PokemonPicture.vue'
+import getPokemonOptions from '@/helpers/getPokemonOptions'
+
+export default {
+  components: { PokemonOptions, PokemonPicture },
+  data() {
+    return {
+      pokemonsArr: [],
+      pokemon: null,
+      showPokemon: false,
+      showAnswer: false,
+      message: '',
+    }
+  },
+  methods: {
+    async mixPokemonArray() {
+      this.pokemonsArr = await getPokemonOptions()
+      const rndInt = Math.floor(Math.random() * 4)
+      this.pokemon = this.pokemonsArr[rndInt]
+    },
+    checkAnswer(selectedId) {
+      this.showPokemon = true
+      this.showAnswer = true
+
+      if (selectedId === this.pokemon.id) {
+        this.message = `Correcto, ${this.pokemon.name}`
+      } else {
+        this.message = `Ups, era ${this.pokemon.name}`
+      }
+    },
+    newGame() {
+      ;(this.showPokemon = false),
+        (this.showAnswer = false),
+        (this.pokemonsArr = []),
+        this.mixPokemonArray(),
+        (this.pokemon = null)
+    },
+  },
+  mounted() {
+    this.mixPokemonArray()
+  },
+}
+&lt;/script&gt;
+
+&lt;style&gt;&lt;/style&gt;
+</code></pre>
+<h2 id="desplegar-nuestro-juego-en-produccion">Desplegar nuestro juego en producción</h2>
+<pre><code>npm run build
+npm run preview
+</code></pre>
+<h2 id="codigo-fuente-de-la-seccion">Código fuente de la sección</h2>
+<p>En <a href="../assets/codigo-vue/PokemonGame.zip">este enlace</a> encontraréis el código fuente de la aplicación finalizada.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenido generado por el equipo educativo de 2º DAW del IES Rafael Alberti
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/IESAlbertiCadiz" target="_blank" rel="noopener" title="IES Alberti en Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

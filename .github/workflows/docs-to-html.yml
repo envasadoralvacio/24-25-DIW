@@ -1,0 +1,63 @@
+name: docs-to-html
+
+on:
+  # Si quieres elegir cuándo lanzarlo, comenta las líneas push y siguientes y descomenta la línea a continuación:
+  # workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/*'
+
+jobs:
+  list-files:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v2
+      - id: set-matrix
+        run: echo "::set-output name=matrix::$(ls docs/*.md | sed -e 's/docs\/\(.*\).md/\1/' | jq -R -s -c 'split("\n")[:-1]' )"
+        
+  converts_via_pandoc_to_html:
+    needs: list-files
+    runs-on: ubuntu-18.04
+    strategy:
+        # Este es el número de trabajos en paralelo que se va a hacer. Más de uno puede provocar conflictos en los commits.
+        max-parallel: 1
+        matrix:
+            # Si quieres pasar a HTML solamente unos documentos en concreto, comenta la siguiente línea
+            md: ${{ fromJson(needs.list-files.outputs.matrix) }}
+            # Y descomenta la siguiente, indicando el listado de nombres de los archivos .md que quieres convertir
+            # md: [proyecto1,proyecto2,proyecto3]
+    steps:
+      - uses: actions/checkout@v2.3.4
+      
+      - name: Remove File
+        uses: JesseTG/rm@v1.0.2
+        with:
+          path: docs/${{ matrix.md }}.html
+      
+      - name: Modify permissions
+        run: sudo chmod 777 docs
+    
+      - uses: docker://pandoc/core:2.9
+        with:
+          # Se puede añadir el parámetro --toc para poner una tabla de contenidos al inicio
+          # args: "-s --toc -c css/modest.css docs/${{ matrix.md }}.md -o docs/${{ matrix.md }}.html"
+          args: "-s -c css/modest.css docs/${{ matrix.md }}.md -o docs/${{ matrix.md }}.html"
+      
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: GitHub Action Bot
+          author_email: test@github.com
+          message: "added o modified html files"
+          add: "*.html"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true

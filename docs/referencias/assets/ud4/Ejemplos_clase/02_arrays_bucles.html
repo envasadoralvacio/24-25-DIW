@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays</title>
+
+        <script>
+            // Declaración
+            let items   = [1, 2];   // Array con elementos
+            let str     = "Cadena"; // Cadena de caracteres, similar a un array
+
+            // forEach
+            console.log("FOREACH");
+            items.forEach(function(item){console.log(item)});
+
+            // for
+            console.log("FOR");
+            for(let i=0 ; i<items.length ; i++){
+                const elem = items[i];
+                console.log(elem);
+            }
+
+            // for..of
+            // VCS TIP: escribe "forof" y se autocompletará la estructura
+            console.log("FOR..OF");
+            for (const item of items) {
+                console.log(item);
+            }
+
+            for (const c of str) {
+                console.log(c);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Arrays</h1>
+    </body>
+</html>
+

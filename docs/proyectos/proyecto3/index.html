@@ -1,0 +1,902 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../proyecto2/">
+      
+      
+        <link rel="next" href="../proyecto4/">
+      
+      
+      <link rel="icon" href="../assets/logo-blanco.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Proyecto 3 - DWEC - Proyectos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proyecto-3-ampliando-funcionalidades-en-un-proyecto-existente" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="DWEC - Proyectos" class="md-header__button md-logo" aria-label="DWEC - Proyectos" data-md-component="logo">
+      
+  <img src="../assets/logo-blanco.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DWEC - Proyectos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Proyecto 3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto1/" class="md-tabs__link">
+        
+  
+    
+  
+  Proyecto 1
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto2/" class="md-tabs__link">
+        
+  
+    
+  
+  Proyecto 2
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Proyecto 3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto4/" class="md-tabs__link">
+        
+  
+    
+  
+  Proyecto 4
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto6/" class="md-tabs__link">
+        
+  
+    
+  
+  Proyecto 6
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DWEC - Proyectos" class="md-nav__button md-logo" aria-label="DWEC - Proyectos" data-md-component="logo">
+      
+  <img src="../assets/logo-blanco.svg" alt="logo">
+
+    </a>
+    DWEC - Proyectos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Proyecto 3
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto 3
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentacion-teorica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentación Teórica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos del Proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formato-y-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato y Entrega
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluacion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluación del proyecto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluación del proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterio-5d-se-ha-creado-un-codigo-que-capture-y-utilice-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 5d) Se ha creado un código que capture y utilice eventos.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-5e-se-han-reconocido-las-capacidades-del-lenguaje-relativas-a-la-gestion-de-formularios-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 5e) Se han reconocido las capacidades del lenguaje relativas a la gestión de formularios Web.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nota-propiedad-intelectual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota: Propiedad Intelectual
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentacion-teorica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentación Teórica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos del Proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formato-y-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato y Entrega
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluacion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluación del proyecto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluación del proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterio-5d-se-ha-creado-un-codigo-que-capture-y-utilice-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 5d) Se ha creado un código que capture y utilice eventos.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-5e-se-han-reconocido-las-capacidades-del-lenguaje-relativas-a-la-gestion-de-formularios-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio 5e) Se han reconocido las capacidades del lenguaje relativas a la gestión de formularios Web.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nota-propiedad-intelectual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota: Propiedad Intelectual
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="proyecto-3-ampliando-funcionalidades-en-un-proyecto-existente">Proyecto 3: Ampliando Funcionalidades en un Proyecto Existente</h1>
+<p><center>
+<img alt="" src="../assets/proyecto3.png" />
+</center></p>
+<h2 id="fundamentacion-teorica">Fundamentación Teórica</h2>
+<p>En esta etapa del curso, hemos adquirido conocimientos sólidos sobre eventos, manipulación del DOM, formularios y validaciones, y almacenamiento en el navegador, todos elementos esenciales para desarrollar aplicaciones web interactivas. </p>
+<p>Este proyecto te brinda la oportunidad de aplicar y ampliar estos conocimientos a través de la mejora de uno de los proyectos que hemos desarrollado en clase.</p>
+<h2 id="objetivos-del-proyecto">Objetivos del Proyecto</h2>
+<ul>
+<li>
+<p>Ampliar y mejorar las funcionalidades existentes en el proyecto elegido utilizando eventos, DOM, formularios y validaciones, y almacenamiento en el navegador.</p>
+</li>
+<li>
+<p>Demostrar el uso de sintaxis ES6, variables apropiadas, comentarios descriptivos en el código y mantener un estilo de código uniforme.</p>
+</li>
+</ul>
+<h2 id="descripcion-del-proyecto">Descripción del Proyecto</h2>
+<ol>
+<li>
+<p>Elije uno de los proyectos previos mencionados como base para tu proyecto de mejora.</p>
+<ul>
+<li><a href="https://silly-dasik-ac4455.netlify.app/">Carrito de Compra</a></li>
+<li><a href="https://cerulean-nougat-6c79f7.netlify.app/">Buscador de Coches</a></li>
+<li><a href="https://655c75aa4ac8fd5dc915fd7d--merry-blancmange-46af10.netlify.app/">Emails con Local Storage</a></li>
+<li><a href="https://655c77bbce013d5dd99648ac--flourishing-kashata-b1d701.netlify.app/">CRM con IndexDB</a></li>
+<li><a href="https://655c77280d7a3b5f25c94d82--sweet-hummingbird-df30c9.netlify.app/">Proyecto Clima</a></li>
+<li><a href="">Proyecto Buscador Recetas</a></li>
+</ul>
+</li>
+<li>
+<p>Identifica las áreas en las que puedes agregar nuevas funcionalidades o mejorar las existentes utilizando los conocimientos adquiridos. Algunas ideas:</p>
+<ul>
+<li>Mejorar la interfaz de usuario.</li>
+<li>Agregar validaciones de formularios sólidas.</li>
+<li>Implementar funcionalidades de arrastrar y soltar (si es aplicable).</li>
+<li>Mejorar la experiencia del usuario mediante la gestión de eventos.</li>
+<li>Añadir capacidades de búsqueda y filtrado.</li>
+<li>Ampliar las opciones de almacenamiento en el navegador.</li>
+<li>Implementar nuevas funcionalidades.</li>
+</ul>
+</li>
+<li>
+<p>Documenta claramente las mejoras que has realizado en tu proyecto. Asegúrate de describir las funcionalidades adicionales y cómo se integran en el proyecto existente.</p>
+</li>
+<li>
+<p>Mantén un registro de los recursos externos que hayas utilizado y asegúrate de cumplir con las normativas de propiedad intelectual (referencia adecuada de recursos de terceros).</p>
+</li>
+</ol>
+<h2 id="formato-y-entrega">Formato y Entrega</h2>
+<ul>
+<li>La entrega se realizará mediante el aula virtual.</li>
+<li>A través del enlace habilitado, sube un enlace al repositorio de Github del proyecto.</li>
+<li>Asegúrate de que el repositorio sea <strong>público</strong> o de que <strong>me invites como colaborador</strong> para que pueda acceder y evaluar tu trabajo.</li>
+</ul>
+<h2 id="evaluacion-del-proyecto">Evaluación del proyecto</h2>
+<p>Mediante este proyecto se evalúan los siguientes criterios de evaluación:</p>
+<h3 id="criterio-5d-se-ha-creado-un-codigo-que-capture-y-utilice-eventos">Criterio 5d) Se ha creado un código que capture y utilice eventos.</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Indicador</strong></th>
+<th style="text-align: center;"><strong>Excelente</strong></th>
+<th style="text-align: center;"><strong>Aceptable</strong></th>
+<th style="text-align: center;"><strong>Insatisfactorio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Captura de Eventos (4pt)</strong></td>
+<td style="text-align: center;">El código demuestra la habilidad para capturar y utilizar eventos de manera efectiva, implementando múltiples eventos con una lógica sólida (4pt)</td>
+<td style="text-align: center;">El código es capaz de capturar y utilizar eventos, aunque podría haberse implementado de manera más efectiva o con menos eventos (2pt)</td>
+<td style="text-align: center;">La captura de eventos en el código es insatisfactoria o inexistente (0pt)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Variedad de Eventos (3pt)</strong></td>
+<td style="text-align: center;">El código utiliza una amplia variedad de eventos relevantes para la funcionalidad del proyecto (3pt)</td>
+<td style="text-align: center;">El código utiliza eventos, pero la variedad es limitada o poco relevante (2pt)</td>
+<td style="text-align: center;">La elección de eventos es limitada y no contribuye significativamente a la funcionalidad (0pt)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Gestión de Eventos (3pt)</strong></td>
+<td style="text-align: center;">El código demuestra una gestión efectiva de eventos, incluyendo la prevención de problemas comunes y la garantía de una respuesta adecuada a eventos del usuario (3pt)</td>
+<td style="text-align: center;">El código gestiona eventos, pero puede haber problemas comunes o respuestas inadecuadas (2pt)</td>
+<td style="text-align: center;">La gestión de eventos en el código es ineficaz o inexistente (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="criterio-5e-se-han-reconocido-las-capacidades-del-lenguaje-relativas-a-la-gestion-de-formularios-web">Criterio 5e) Se han reconocido las capacidades del lenguaje relativas a la gestión de formularios Web.</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Indicador</strong></th>
+<th style="text-align: center;"><strong>Excelente</strong></th>
+<th style="text-align: center;"><strong>Aceptable</strong></th>
+<th style="text-align: center;"><strong>Insatisfactorio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Uso de Formularios (4pt)</strong></td>
+<td style="text-align: center;">El código hace un uso eficiente y efectivo de formularios web para recopilar y procesar datos (4pt)</td>
+<td style="text-align: center;">El código utiliza formularios web, pero con oportunidades de mejora en eficiencia o efectividad (2pt)</td>
+<td style="text-align: center;">El uso de formularios web en el código es deficiente o poco efectivo (0pt)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Manipulación del DOM (3pt)</strong></td>
+<td style="text-align: center;">El código demuestra una manipulación efectiva del DOM relacionada con formularios, incluyendo la creación, modificación y eliminación de elementos del formulario (3pt)</td>
+<td style="text-align: center;">El código manipula el DOM relacionado con formularios, pero con oportunidades de mejora en la efectividad (2pt)</td>
+<td style="text-align: center;">La manipulación del DOM relacionada con formularios en el código es ineficaz o inexistente (0pt)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Implementación de Formularios Dinámicos (3pt)</strong></td>
+<td style="text-align: center;">El código implementa formularios dinámicos que responden a la interacción del usuario de manera eficiente y efectiva (3pt)</td>
+<td style="text-align: center;">El código implementa formularios dinámicos, pero con oportunidades de mejora en eficiencia o efectividad (2pt)</td>
+<td style="text-align: center;">La implementación de formularios dinámicos en el código es deficiente o poco efectiva (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="nota-propiedad-intelectual">Nota: Propiedad Intelectual</h2>
+<blockquote>
+<blockquote>
+<p>A menudo es inevitable, al escribir un documento, hacer uso de recursos creados por terceras personas. Es por tanto comprensible hacerlo en el marco de una práctica de nuestros estudios, siempre que esto se documente claramente y no suponga plagio en la práctica.</p>
+<p>Por lo tanto, al presentar una práctica que haga uso de recursos ajenos, se deberá referenciar claramente estos recursos, especificando el nombre de cada recurso, su autor, el lugar donde se obtuvo y el su estatus legal: si la obra está protegida por copyright o se acoge a alguna otra licencia de uso (Creative Commons, licencia GNU, GPL ...). El estudiante deberá asegurarse de que la licencia que sea no impide específicamente su uso en el marco de la práctica. En caso de no encontrar la información correspondiente deberá asumir que la obra está protegida por copyright.</p>
+</blockquote>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenido generado por el equipo educativo de ciberseguridad del IES Rafael Alberti
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/IESAlbertiCadiz" target="_blank" rel="noopener" title="IES Rafael Alberti en Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

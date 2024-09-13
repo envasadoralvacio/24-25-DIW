@@ -1,0 +1,56 @@
+INHERIT: ../base.yml
+site_name: DWEC - Apuntes y referencias
+site_dir: ../../docs/materiales
+
+plugins:
+  - search:
+      lang: es
+
+# Page tree
+nav:
+  - Inicio: index.md
+  - UD1: ud1.md
+  - UD2: ud2.md
+  - UD3: ud3.md
+  - UD4: ud4.md
+  - UD5:
+      - ud5.md
+      - ud5.1-Empezando-con-React.md
+      - ud5.2-Paso-a-paso.md
+      - ud5.3-Tres-en-raya.md
+      - ud5.4-Mi-Primer-Proyecto.md
+      - ud5.5-Fundamentos.md
+      - ud5.6-Formularios.md
+      - ud5.7-Todo-App.md
+      - ud5.8-Drag-and-Drop.md
+      - ud5.9-useEffect-fetch.md
+      - ud5.10-React-Router.md
+      - ud5.10.2-React.lazy.md
+      - ud5.11-Context-API.md
+      - ud5.12-React+Firebase.md
+      - ud5.13-Patrones.md
+      - ud5.14-Refuerzo.md
+      - ud5.15-Ampliacion.md
+  - UD6: ud6.md
+  - UD7: ud7.md
+  - UD8:
+      - ud8.md
+      - ud8.1-Paso-a-paso.md
+      - ud8.2-Fundamentos-Vue.md
+      - ud8.3-Comenzar-proyecto-Vue.md
+      - ud8.4-Mi-Primer-Proyecto.md
+      - ud8.5-Indecision_APP.md
+      - ud8.6-Pokemon-Game.md
+      - ud8.7-Vue-Router.md
+      - ud8.8-Vuex.md
+      - ud8.8.1-Pinnia.md
+      - ud8.9-Journal_APP.md
+      - ud8.10-Vue-con-Firebase.md
+      - ud8.11-Refuerzo.md
+      - ud8.12-Ampliacion.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/IESAlbertiCadiz
+      name: IES Alberti en Twitter

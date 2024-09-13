@@ -1,0 +1,67 @@
+name: mkdocs-to-pdf
+
+on:
+  # Si quieres elegir cuándo lanzarlo, comenta las líneas push y siguientes y descomenta la línea a continuación:
+  # workflow_dispatch:
+   push:
+    branches:
+      - main
+    paths:
+      - 'mkdocs/**'
+
+jobs:
+  list-dirs:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v2
+      - id: set-matrix
+        run: |-
+          cd mkdocs
+          echo "::set-output name=matrix::$(ls -d */ | sed 's/.$//' | jq -R -s -c 'split("\n")[:-1]' )"
+        
+  generate_html:
+    needs: list-dirs
+    runs-on: ubuntu-20.04
+    strategy:
+        # Este es el número de trabajos en paralelo que se va a hacer. Más de uno puede provocar conflictos en los commits.
+        max-parallel: 1
+        matrix:
+            # Si quieres pasar a HTML solamente unas carpetas en concreto, comenta la siguiente línea
+            dirs: ${{ fromJson(needs.list-dirs.outputs.matrix) }}
+            # Y descomenta la siguiente, indicando el listado de nombres de los archivos .md que quieres convertir
+            # dirs: [example/,example2/]
+    steps:
+      - uses: actions/checkout@v2.3.4
+      
+      - name: Remove Original
+        uses: JesseTG/rm@v1.0.2
+        with:
+          path: docs/${{ matrix.dirs }}
+      
+      - name: Modify permissions
+        run: sudo chmod 777 docs
+        
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+          
+      - name: Install dependencies
+        run: |-
+          sudo apt-get install -y python3-pip python3-cffi python3-brotli libpango-1.0-0 libharfbuzz0b libpangoft2-1.0-0
+          pip install wheel && pip install django-weasyprint && pip install mkdocs && pip install mkdocs-material && pip install mkdocs-with-pdf
+          
+      - name: Generate mkdocs
+        run: |-
+          cd mkdocs/${{ matrix.dirs }}
+          mkdocs build
+      
+      - name: Deploy to branch exports
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/${{ matrix.dirs }}/pdf
+          publish_branch: exports
+          keep_files: true
