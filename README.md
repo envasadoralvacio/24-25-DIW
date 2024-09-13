@@ -16,9 +16,9 @@ Material didáctico del módulo Desarrollo web en entorno cliente del CFGS Desar
 
 - [Presentación del módulo](https://0xmrivas.github.io/material-DWEC/slides/presentacion.html)
 
-## Materiales
+## Referencias
 
-- [Materiales del curso](https://0xmrivas.github.io/material-DWEC/docs/referencias)
+- [Referencias del curso](https://0xmrivas.github.io/material-DWEC/docs/referencias)
 
 ## Proyectos
 - [Proyectos del curso](https://0xmrivas.github.io/material-DWEC/docs/proyectos/)

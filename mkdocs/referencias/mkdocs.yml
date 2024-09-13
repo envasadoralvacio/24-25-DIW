@@ -1,6 +1,6 @@
 INHERIT: ../base.yml
 site_name: DWEC - Apuntes y referencias
-site_dir: ../../docs/materiales
+site_dir: ../../docs/referencias
 
 plugins:
   - search:
