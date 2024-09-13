@@ -9,16 +9,16 @@
 Material didáctico del módulo Desarrollo web en entorno cliente del CFGS Desarrollo web en entorno cliente del IES Rafael Alberti.
 
 <p align="center">
-  <img src="logos/DWE-22-23-moodle.png" alt="Cover Desarrollo web en entorno cliente">
+  <img src="assets/DWE-22-23-moodle.png" alt="Cover Desarrollo web en entorno cliente">
 </p>
 
 ## Diapositivas
 
-- [Presentación del módulo](https://0xmrivas.github.io/material-DWEC//slides/presentacion.html)
+- [Presentación del módulo](https://0xmrivas.github.io/material-DWEC/slides/presentacion.html)
 
 ## Materiales
 
-- [Materiales del curso](https://0xmrivas.github.io/material-DWEC//docs/referencias)
+- [Materiales del curso](https://0xmrivas.github.io/material-DWEC/docs/referencias)
 
 ## Proyectos
-- [Proyectos del curso](https://0xmrivas.github.io/material-DWEC//docs/proyectos/)
+- [Proyectos del curso](https://0xmrivas.github.io/material-DWEC/docs/proyectos/)
