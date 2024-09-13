@@ -9,7 +9,7 @@
 Material didáctico del módulo Desarrollo web en entorno cliente del CFGS Desarrollo web en entorno cliente del IES Rafael Alberti.
 
 <p align="center">
-  <img src="assets/DWE-22-23-moodle.png" alt="Cover Desarrollo web en entorno cliente">
+  <img src="logos/DWE-22-23-moodle.png" alt="Cover Desarrollo web en entorno cliente">
 </p>
 
 ## Diapositivas
