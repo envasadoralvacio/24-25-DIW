@@ -22,12 +22,12 @@ Elaborar una propuesta inicial para la aplicación web que se desarrollará como
 2 semanas.
 
 ### Criterios evaluados
-- **1a)** Diferenciación de los modelos de ejecución cliente/servidor.
-- **1b)** Capacidades y mecanismos de ejecución en navegadores.
-- **1c)** Principales lenguajes de programación para clientes web.
-- **1d)** Ventajas y desventajas de la programación con lenguajes de script.
-- **1e)** Mecanismos de integración de lenguajes de marcas con lenguajes de programación de clientes web.
-- **1f)** Evaluación de herramientas de programación para clientes web.
+- **1a)** Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente web.
+- **1b)** Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores web.
+- **1c)** Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes web.
+- **1d)** Se han reconocido las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional.
+- **1e)** Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes web.
+- **1f)** Se han reconocido y evaluado las herramientas de programación sobre clientes web.
 
 ## Actividades
 
@@ -39,17 +39,17 @@ Elaborar una propuesta inicial para la aplicación web que se desarrollará como
 
 4. **Funcionalidades clave**: Identificar y listar las funcionalidades principales que ofrecerá la aplicación (ej: sistema de autenticación, gestión de usuarios, etc.).
 
-5. **Modelos de ejecución**: Investigar y comparar los modelos de ejecución en cliente y servidor, explicando sus diferencias y ejemplos de uso.
+5. **Modelos de ejecución (c.e. 1a)**: Investigar y comparar los modelos de ejecución en cliente y servidor, explicando sus diferencias y ejemplos de uso.
 
-6. **Lenguajes de programación web**: Analizar los lenguajes de programación más utilizados para el desarrollo web en cliente, como JavaScript y TypeScript, explicando sus ventajas y desventajas.
+6. **Lenguajes de programación web (c.e. 1c, 1d)**: Analizar los lenguajes de programación más utilizados para el desarrollo web en cliente, como JavaScript y TypeScript, explicando sus ventajas y desventajas.
 
 7. **Tecnologías a utilizar**: Seleccionar las tecnologías (lenguajes de programación, frameworks, herramientas de desarrollo) que se utilizarán para el desarrollo de la aplicación. Justificar la elección en base a la investigación realizada. Asegurarse de incluir:
    
-    * **Evaluación de los mecanismos de integración de lenguajes de marcas con lenguajes de programación de clientes web**: Describir cómo los lenguajes de marcas (como HTML) se integran con los lenguajes de programación (como JavaScript) en la aplicación.
+    * **Evaluación de los mecanismos de integración de lenguajes de marcas con lenguajes de programación de clientes web  (c.e. 1e)**: Describir cómo los lenguajes de marcas (como HTML) se integran con los lenguajes de programación (como JavaScript) en la aplicación.
 
-    * **Evaluación de herramientas de programación para clientes web**: Seleccionar herramientas de desarrollo (editores de código, frameworks, bibliotecas) y justificar su elección. Explicar las funciones y ventajas de cada herramienta en el contexto del desarrollo web.
+    * **Evaluación de herramientas de programación para clientes web  (c.e. 1f)**: Seleccionar herramientas de desarrollo (editores de código, frameworks, bibliotecas) y justificar su elección. Explicar las funciones y ventajas de cada herramienta en el contexto del desarrollo web.
 
-8. **Compatibilidad en navegadores**: Realizar un estudio sobre cómo los diferentes navegadores manejan JavaScript y otros lenguajes utilizados en el desarrollo web, identificando problemas de compatibilidad y soluciones. Incluye un análisis sobre cómo la integración de lenguajes de marcas y lenguajes de programación afecta la compatibilidad y el rendimiento de la aplicación en diferentes navegadores.
+8. **Compatibilidad en navegadores (c.e. 1b)**: Realizar un estudio sobre cómo los diferentes navegadores manejan JavaScript y otros lenguajes utilizados en el desarrollo web, identificando problemas de compatibilidad y soluciones. Incluye un análisis sobre cómo la integración de lenguajes de marcas y lenguajes de programación afecta la compatibilidad y el rendimiento de la aplicación en diferentes navegadores.
 
 ## Formato y entrega
 
@@ -111,7 +111,7 @@ Mediante este proyecto se evalúan los siguientes criterios de evaluación:
 | **Ejemplos utilizados para ilustrar las capacidades y mecanismos identificados (3pt)** | Utiliza ejemplos concretos y relevantes para ilustrar las capacidades y mecanismos identificados, son pertinentes y están bien integrados en la explicación (3pt) | Los ejemplos son adecuados, pero podrían ser más relevantes o estar mejor relacionados con los temas (1,5pt) | Los ejemplos son inadecuados o están ausentes (0pt) |
 | **Referencias relevantes a fuentes académicas o profesionales para respaldar la caracterización (1pt)** | Incluye múltiples referencias apropiadas y las cita correctamente (1pt) | Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt) | Carece de referencias o las referencias son inadecuadas o incorrectas (0pt) |
 
-#### 1c) Se ha evaluado la utilidad y las implicaciones de los principales lenguajes de programación utilizados en clientes Web.
+#### 1c) Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes web.
 
 | Descriptores                         | Bien         | Regular       | Insuficiente  |
 |-------------------------------------|--------------|---------------|--------------|
@@ -120,7 +120,7 @@ Mediante este proyecto se evalúan los siguientes criterios de evaluación:
 | **Justificación de la elección de los lenguajes para el proyecto (2pt)** | Justifica de manera convincente la elección de los lenguajes para el proyecto, basándose en las necesidades del proyecto y las características de los lenguajes (2pt) | La justificación es adecuada pero puede ser mejorada en algunos aspectos (1pt) | La justificación es insuficiente o poco convincente (0pt) |
 | **Referencias relevantes a fuentes académicas o profesionales para respaldar la evaluación (1pt)** | Incluye múltiples referencias apropiadas y las cita correctamente (1pt) | Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt) | Carece de referencias o las referencias son inadecuadas o incorrectas (0pt) |
 
-#### 1d) Se han analizado y comparado las ventajas y desventajas de la programación con lenguajes de script en el desarrollo de aplicaciones web.
+#### 1d) Se han reconocido las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional.
 
 | Descriptores                         | Bien         | Regular       | Insuficiente |
 |-------------------------------------|--------------|---------------|--------------|
@@ -129,7 +129,7 @@ Mediante este proyecto se evalúan los siguientes criterios de evaluación:
 | **Relevancia de los lenguajes de script en el contexto del desarrollo web moderno (2pt)** | Explica claramente la relevancia de los lenguajes de script en el contexto del desarrollo web moderno (2pt) | La explicación es adecuada pero podría ser más detallada (1pt) | La explicación es insuficiente o poco clara (0pt) |
 | **Referencias relevantes a fuentes académicas o profesionales para respaldar el análisis (1pt)** | Incluye múltiples referencias apropiadas y las cita correctamente (1pt) | Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt) | Carece de referencias o las referencias son inadecuadas o incorrectas (0pt) |
 
-#### 1e) Se ha evaluado el uso de mecanismos de integración de lenguajes de marcas con lenguajes de programación de clientes web.
+#### 1e)  Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes web.
 
 | Descriptores                         | Bien         | Regular       | Insuficiente |
 |-------------------------------------|--------------|---------------|--------------|
@@ -138,14 +138,14 @@ Mediante este proyecto se evalúan los siguientes criterios de evaluación:
 | **Impacto de la integración en el desarrollo y mantenimiento de aplicaciones web (2pt)** | Explica claramente el impacto de la integración en el desarrollo y mantenimiento de aplicaciones web (2pt) | La explicación es adecuada pero podría ser más detallada (1pt) | La explicación es insuficiente o poco clara (0pt) |
 | **Referencias relevantes a fuentes académicas o profesionales para respaldar la evaluación (1pt)** | Incluye múltiples referencias apropiadas y las cita correctamente (1pt) | Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt) | Carece de referencias o las referencias son inadecuadas o incorrectas (0pt) |
 
-#### 1f) Se ha evaluado el uso de herramientas de programación para clientes web.
+#### 1f) Se han reconocido y evaluado las herramientas de programación sobre clientes web.
 
-| Descriptores                         | Bien         | Regular       | Insuficiente |
-|-------------------------------------|--------------|---------------|--------------|
-| **Evaluación de herramientas de programación para clientes web (5pt)** | Realiza una evaluación detallada y bien fundamentada de las herramientas de programación disponibles, destacando sus características, ventajas y desventajas (5pt) | La evaluación es adecuada pero puede faltar detalle o profundidad en algunos aspectos (2,5pt) | La evaluación es superficial o incompleta (0pt) |
-| **Comparación entre diferentes herramientas y sus aplicaciones prácticas (3pt)** | Compara efectivamente diferentes herramientas de programación, proporcionando ejemplos y explicaciones claras sobre sus aplicaciones prácticas (3pt) | La comparación es adecuada pero podría ser más detallada o clara (1,5pt) | La comparación es deficiente o ausente (0pt) |
-| **Impacto de la elección de herramientas en el desarrollo y mantenimiento de aplicaciones web (1pt)** | Explica claramente el impacto de la elección de herramientas en el desarrollo y mantenimiento de aplicaciones web (1pt) | La explicación es adecuada pero podría ser más detallada (0,5pt) | La explicación es insuficiente o poco clara (0pt) |
-| **Referencias relevantes a fuentes académicas o profesionales para respaldar la evaluación (1pt)** | Incluye múltiples referencias apropiadas y las cita correctamente (1pt) | Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt) | Carece de referencias o las referencias son inadecuadas o incorrectas (0pt) |
+| Descriptores                         | Bien (5pt)  | Regular (2,5pt)  | Insuficiente (0pt) |
+|-------------------------------------|-------------|-----------------|-------------------|
+| **Evaluación exhaustiva de herramientas (5pt)** | Proporciona una evaluación completa y detallada de varias herramientas (ej. editores de código, frameworks como React, Angular, bibliotecas como jQuery), explicando sus características, ventajas y desventajas en el desarrollo web (5pt) | Menciona alguna herramienta, pero el análisis es superficial o carece de profundidad en cuanto a sus ventajas/desventajas (2,5pt) | No menciona o analiza herramientas relevantes para el desarrollo web (0pt) |
+| **Comparación detallada (3pt)** | Compara eficazmente varias herramientas, demostrando una comprensión clara de cuándo y por qué usar cada una, con ejemplos prácticos y bien integrados (3pt) | Comparación adecuada pero limitada, o ejemplos no del todo claros (1,5pt) | Falta una comparación clara o ejemplos, o no se justifica el uso de herramientas (0pt) |
+| **Impacto en el desarrollo (1pt)** | Explica claramente cómo la elección de herramientas afecta al desarrollo y mantenimiento de aplicaciones web, con ejemplos relevantes (1pt) | Menciona el impacto, pero de forma poco detallada o clara (0,5pt) | No considera el impacto en el desarrollo o mantenimiento (0pt) |
+| **Referencias relevantes (1pt)** | Incluye referencias apropiadas y las cita correctamente para respaldar la evaluación (1pt) | Incluye pocas referencias o no están bien citadas (0,5pt) | No se incluyen referencias o son inadecuadas (0pt) |
 
 
 ## Nota: Propiedad intelectual
