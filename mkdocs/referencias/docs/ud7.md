@@ -6,5 +6,5 @@ hide:
 # UD7 - eCommerce Platform
 
 <center>
-![](assets/ud7/eCommerce.png)
+![](assets/ud7/eCommerce.webp)
 </center>

@@ -6,40 +6,96 @@ hide:
 # UD4 - DOM manipulation and events
 
 <center>
-![](assets/ud4/ud4-eventos.jpg)
+![](assets/ud4/ud4-eventos.webp)
 </center>
 
-Como referencia de para esta unidad se ha tomado el material de [lenguajejs.com](https://lenguajejs.com/):
+Como referencia de para esta unidad se ha tomado el material de "[The Modern JavaScript Tutorial](https://javascript.info/)". En concreto los siguientes apartados del mismo:
 
+[Document](https://javascript.info/document)
 
-### DOM
+* Browser environment, specs
+* DOM tree
+* Walking the DOM
+* Searching: getElement*, querySelector*
+* Node properties: type, tag and contents
+* Attributes and properties
+* Modifying the document
+* Styles and classes
+* Element size and scrolling
+* Window sizes and scrolling
+* Coordinates
 
-* [¿Qué es el DOM?](https://lenguajejs.com/javascript/dom/que-es/)
-* [Seleccionar elementos del DOM](https://lenguajejs.com/javascript/dom/seleccionar-elementos-dom/)
-* [Crear elementos en el DOM](https://lenguajejs.com/javascript/dom/crear-elementos-dom/)
-* [Gestionar atributos del DOM](https://lenguajejs.com/javascript/dom/atributos-del-dom/)
-* [La API classList de Javascript](https://lenguajejs.com/javascript/dom/manipular-clases-css/)
-* [Contenido en el DOM](https://lenguajejs.com/javascript/dom/contenido-elemento-dom/)
-* [Insertar elementos en el DOM](https://lenguajejs.com/javascript/dom/insertar-elementos-dom/)
-* [Navegar por elementos del DOM](https://lenguajejs.com/javascript/dom/navegar-elementos-dom/)
+[Introduction to Events](https://javascript.info/events)
 
+* Introduction to browser events
+* Bubbling and capturing
+* Event delegation
+* Browser default actions
+* Dispatching custom events
 
-### Eventos
-* [¿Qué son los eventos?](https://lenguajejs.com/javascript/eventos/que-son-eventos/)
-* [Eventos mediante HTML](https://lenguajejs.com/javascript/eventos/eventos-html/)
-* [Eventos mediante Javascript](https://lenguajejs.com/javascript/eventos/eventos-javascript/)
-* [El método addEventListener](https://lenguajejs.com/javascript/eventos/addeventlistener/)
-* [Escuchar eventos y handleEvent](https://lenguajejs.com/javascript/eventos/addeventlistener-handleevent/)
-* [Eventos nativos](https://lenguajejs.com/javascript/eventos/objeto-event/)
-* [Eventos personalizados](https://lenguajejs.com/javascript/eventos/custom-events/)
-* [Eventos del navegador](https://lenguajejs.com/javascript/eventos/eventos-navegador/)
-* [Emisión de eventos](https://lenguajejs.com/javascript/eventos/emision-eventos)
-* [Propagación de eventos](https://lenguajejs.com/javascript/eventos/propagacion-eventos)
+[UI Events](https://javascript.info/event-details)
 
+* Mouse events
+* Moving the mouse: mouseover/out, mouseenter/leave
+* Drag'n'Drop with mouse events
+* Pointer events
+* Keyboard: keydown and keyup
+* Scrolling
+
+[Forms, controls](https://javascript.info/forms-controls)
+
+* Form properties and methods
+* Focusing: focus/blur
+* Events: change, input, cut, copy, paste
+* Forms: event and method submit
+
+[Regular expressions](https://javascript.info/regular-expressions)
+
+[Document and resource loading](https://javascript.info/loading)
+
+* Page: DOMContentLoaded, load, beforeunload, unload, beforeunload, unload
+* Scripts: async, defer
+* Resource loading: onload and onerror
+
+[Storing data in the browser](https://javascript.info/data-storage)
+
+* Cookies, document.cookie
+* LocalStorage, sessionStorage
+* IndexedDB
+
+[Error handling](https://javascript.info/error-handling)
+
+* Error handling, "try...catch"
+* Custom errors, extending Error
+
+[Promises](https://javascript.info/async)
+
+* Introduction: callbacks
+* Promise
+* Promises chaining
+* Error handling with promises
+* Promise API
+* Promisification
+* Async/await
+
+[Network requests](https://javascript.info/network)
+
+* Fetch
+* FormData
+* Fetch: Download progress
+* Fetch: Abort
+* Fetch: Cross-Origin Requests
+* Fetch API
+* URL objects
+* XMLHttpRequest
 
 ## Material de refuerzo y ampliación
-Se recomienda leer las siguientes secciones del material de [lenguajejs.com](https://lenguajejs.com/javascript/):, así como realizar las actividades que se proponen en cada una de ellas:
 
-* [DOM](https://es.javascript.info/document)
-* [Introducción a los eventos](https://es.javascript.info/events)
-* [Eventos en la UI](https://es.javascript.info/event-details)
+Se recomienda la realización de los siguientes cursos de la [certificación algoritmos de javascript y estructuras de datos](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) de freeCodeCamp.
+
+* Learn Form Validation by Building a Calorie Counter
+* Learn Regular Expressions by Building a Spam Filter
+* Review DOM Manipulation by Building a Rock, Paper, Scissors Game
+* Learn localStorage by Building a Todo App
+* Learn Fetch and Promises by Building an fCC Authors Page,
+* Learn Asynchronous Programming by Building an fCC Forum Leaderboard

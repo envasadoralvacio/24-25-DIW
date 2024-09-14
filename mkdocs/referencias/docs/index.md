@@ -5,8 +5,9 @@ hide:
 
 # Desarrollo web en entorno cliente
 
+
 <center>
-![](assets/DWEC-cover.png)
+![](assets/referencias.jpg)
 </center>
 
 
@@ -25,7 +26,7 @@ El módulo se organiza en las siguientes unidades, que se actualizarán a medida
 * [Unidad 7: eCommerce Platform](ud7.md)
 * [Unidad 8: Vue.js](ud8.md)
 
-xº## Referencias web generales
+## Referencias web generales
 
 El desarrollo de software está en constante evolución, actualmente podemos observar como una avalancha de nuevas tendencias tecnológicas y metodologías se va abriendo paso. Este es el motivo principal por el que la mayor parte de los apuntes proporcionados no son más que referencias web actuales a los temas que vamos a tratar.
 
