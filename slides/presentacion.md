@@ -14,6 +14,7 @@
 
 * *Real Decreto 686/2010, de 20 de mayo*
 * *Orden de 16 de junio de 2011*
+* *Real Decreto 405/2023, de 29 de mayo*
 
 ---
 
@@ -67,17 +68,31 @@ r) Organizar y coordinar equipos de trabajo, supervisando el desarrollo del mism
 
 ---
 
-## Distribución horaria
+## Distribución horaria - Grupo A
 
 |          | **Lunes** | **Martes** | **Miércoles** | **Jueves** | **Viernes** |
 |-------------------|-----------|------------|---------------|------------|------------|
-| **08:00 - 09:00** |           |    HLC     |     DWEC      |            |    DWEC    |
-| **09:00 - 10:00** |           |    HLC     |     DWEC      |            |    DWEC    |
-| **10:00 - 11:00** |           |    HLC     |     DWEC      |            |    DWEC    |
+| **08:00 - 09:00** |   DWEC    |            |     DWEC      |            |    HLC     |
+| **09:00 - 10:00** |   DWEC    |            |     DWEC      |            |    HLC     |
+| **10:00 - 11:00** |   DWEC    |            |     DWEC      |            |    HLC     |
 | **11:00 - 11:30** |           |            |               |            |            |
 | **11:30 - 12:30** |           |            |               |            |            |
 | **12:30 - 13:30** |           |            |               |            |            |
 | **13:30 - 14:30** |           |            |               |            |            |
+
+---
+
+## Distribución horaria - Grupo B
+
+|          | **Lunes** | **Martes** | **Miércoles** | **Jueves** | **Viernes** |
+|-------------------|-----------|------------|---------------|------------|------------|
+| **15:30 - 16:30** |   HLC     |    DWEC    |     DWEC      |            |            |
+| **16:30 - 17:30** |   HLC     |    DWEC    |     DWEC      |            |            |
+| **17:30 - 18:30** |   HLC     |    DWEC    |     DWEC      |            |            |
+| **18:30 - 18:45** |           |            |               |            |            |
+| **18:45 - 19:45** |           |            |               |            |            |
+| **19:45 - 20:45** |           |            |               |            |            |
+| **20:45 - 21:45** |           |            |               |            |            |
 
 ---
 
@@ -110,20 +125,23 @@ a) Se ha seleccionado un lenguaje de programación de clientes Web en función d
 b) Se han utilizado los distintos tipos de variables y operadores disponibles en el lenguaje.
 c) Se han identificado los ámbitos de utilización de las variables.
 d) Se han reconocido y comprobado las peculiaridades del lenguaje respecto a las conversiones entre distintos tipos de datos.
-e) Se han añadido comentarios al código.
-f) Se han utilizado mecanismos de decisión en la creación de bloques de sentencias.
-g) Se han utilizado bucles y se ha verificado su funcionamiento.
-h) Se han utilizado herramientas y entornos para facilitar la programación, prueba y depuración del código.
+e) Se han utilizado mecanismos de decisión en la creación de bloques de sentencias.
+f) Se han utilizado bucles y se ha verificado su funcionamiento.
+g) Se han utilizado herramientas y entornos para facilitar la programación, prueba y documentación del código.
 
 3. Escribe código, identificando y aplicando las funcionalidades aportadas por los objetos predefinidos del lenguaje.
-a) Se han identificado los objetos predefinidos del lenguaje.
-b) Se han analizado los objetos referentes a las ventanas del navegador y los documentos Web que contienen.
-c) Se han escrito sentencias que utilicen los objetos predefinidos del lenguaje para cambiar el aspecto del navegador y el documento que contiene.
-d) Se han generado textos y etiquetas como resultado de la ejecución de código en el navegador.
-e) Se han escrito sentencias que utilicen los objetos predefinidos del lenguaje para interactuar con el usuario.
-f) Se han utilizado las características propias del lenguaje en documentos compuestos por varias ventanas y marcos.
-g) Se han utilizado «cookies» para almacenar información y recuperar su contenido.
-h) Se ha depurado y documentado el código.
+a) Se han clasificado y utilizado las funciones predefinidas del lenguaje. 
+b) Se han creado y utilizado funciones definidas por el usuario. 
+c) Se han reconocido las características del lenguaje relativas a la creación y uso de matrices (arrays). 
+d) Se han creado y utilizado matrices (arrays). 
+e) Se han utilizado operaciones agregadas para el manejo de información almacenada en colecciones. 
+f) Se han reconocido las características de orientación a objetos del lenguaje.
+g) Se ha creado código para definir la estructura de objetos.
+h) Se ha probado y documentado el código.
+i) Se han creado métodos y propiedades. 
+j) Se ha creado código que haga uso de objetos definidos por el usuario. 
+k) Se han utilizado patrones de diseño de software. 
+l) Se ha depurado y documentado el código.
 
 4. Programa código para clientes Web analizando y utilizando estructuras definidas por el usuario.
 a) Se han clasificado y utilizado las funciones predefinidas del lenguaje.
@@ -145,6 +163,27 @@ e) Se han reconocido las capacidades del lenguaje relativas a la gestión de for
 f) Se han validado formularios Web utilizando eventos.
 g) Se han utilizado expresiones regulares para facilitar los procedimientos de validación.
 h) Se ha probado y documentado el código.
+
+6. Desarrolla aplicaciones web analizando y aplicando las características del modelo de objetos del documento.
+a) Se ha reconocido el modelo de objetos del documento de una página web.
+b) Se han identificado los objetos del modelo, sus propiedades y métodos. 
+c) Se ha creado y verificado un código que acceda a la estructura del documento. 
+d) Se han creado nuevos elementos de la estructura y modificado elementos ya existentes. 
+e) Se han asociado acciones a los eventos del modelo. 
+f) Se han identificado las diferencias que presenta el modelo en diferentes navegadores. 
+g) Se han programado aplicaciones web de forma que funcionen en navegadores con diferentes implementaciones del modelo. 
+h) Se han independizado las tres capas de implementación (contenido, aspecto y comportamiento), en aplicaciones web.
+
+7. Desarrolla aplicaciones web dinámicas, reconociendo y aplicando mecanismos de comunicación asíncrona entre cliente y servidor.
+a) Se han evaluado las ventajas e inconvenientes de utilizar mecanismos de comunicación asíncrona entre cliente y servidor web. 
+b) Se han analizado los mecanismos disponibles para el establecimiento de la comunicación asíncrona. 
+c) Se han utilizado los objetos relacionados. 
+d) Se han identificado sus propiedades y sus métodos. 
+e) Se ha utilizado comunicación asíncrona en la actualización dinámica del documento web. 
+f) Se han utilizado distintos formatos en el envío y recepción de información.
+g) Se han programado aplicaciones web asíncronas de forma que funcionen en diferentes navegadores.
+h) Se han clasificado, analizado y utilizado librerías y frameworks que faciliten la incorporación de las tecnologías de actualización dinámica a la programación de páginas web. 
+i) Se han creado y probado y documentado aplicaciones web que utilicen estas librerías y frameworks.
 
 ---
 
@@ -192,19 +231,7 @@ Actividad no entregada o no asistencia a una prueba (sin justificación) → 0 p
 
 ## Calificación final
 
-RA 1 → 6%
-
-RA 2 → 8%
-
-RA 3 → 12%
-
-RA 4 → 14%
-
-RA 5 → 12%
-
-RA 6 → 20%
-
-RA 7 → 28%
+*Media aritmética de la calificación obtenida en los criterios de evaluación impartidos hasta el momento de la evaluación.*
 
 ---
 
@@ -222,7 +249,11 @@ Moodle Centros
 
 Pasen
 
-Correo: mrivsan736@g.educaand.es
+Correo: 
+
+* Grupo A - mrivsan736@g.educaand.es
+
+* Grupo B - eleaboj413@g.educaand.es 
 
 ---
 
@@ -234,14 +265,12 @@ Correo: mrivsan736@g.educaand.es
 
 1 - Accede a **Moodle Centros**
 
-2 - Inicia sesión con el *nombre de usuario* y *contraseña* de Pasen
+2 - Inicia sesión con el *nombre de usuario* y *contraseña* de iPasen
 
 3 - Cambia tu *email* y actualiza tus *datos*
 
-4 - [Cumplimenta tus datos en ésta hoja de cálculo](https://docs.google.com/spreadsheets/d/1RR6IERLrXGSslBv0PftVJKsRpWFtcvrsZ1cqpVV8vJk/edit?usp=sharing)
+<!-- 4 - [Cumplimenta tus datos en ésta hoja de cálculo](https://docs.google.com/spreadsheets/d/1RR6IERLrXGSslBv0PftVJKsRpWFtcvrsZ1cqpVV8vJk/edit?usp=sharing)
 
 5 - [Rellenamos el siguiente cuestionario](https://docs.google.com/forms/d/1Hhtc76zP0TDgCk-wirJNh6JHecTyRKuGBQZLhgM7cxw/edit)
 
-4 - Realizamos **la prueba de evaluación inicial (tablón de Moodle)**
-
----
+4 - Realizamos **la prueba de evaluación inicial (tablón de Moodle)** -->
