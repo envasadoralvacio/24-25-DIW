@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# Desarrollo web en entorno cliente
+# Diseño de Interfaces Web
 
 
 <center>

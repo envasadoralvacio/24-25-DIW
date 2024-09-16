@@ -1,4 +1,4 @@
-# Desarrollo web en entorno cliente
+# Diseño de Interfaces Web
 
 <p align="center">
   <a href="LICENSE">
@@ -6,10 +6,10 @@
     </a>
 </p>
 
-Material didáctico del módulo Desarrollo web en entorno cliente del CFGS Desarrollo web en entorno cliente del IES Rafael Alberti.
+Material didáctico del módulo Diseño de Interfaces Web del CFGS Desarrollo de aplicaciones web del IES Rafael Alberti.
 
 <p align="center">
-  <img src="logos/DWE-22-23-moodle.png" alt="Cover Desarrollo web en entorno cliente">
+  <img src="logos/DWE-22-23-moodle.png" alt="Cover Diseño de Interfaces Web">
 </p>
 
 ## Diapositivas
