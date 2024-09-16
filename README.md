@@ -14,11 +14,11 @@ Material didáctico del módulo Diseño de Interfaces Web del CFGS Desarrollo de
 
 ## Diapositivas
 
-- [Presentación del módulo](https://0xmrivas.github.io/material-DWEC/slides/presentacion.html)
+- [Presentación del módulo](https://0xmrivas.github.io/Dise-o-de-Interfaces-Web/slides/presentacion.html)
 
 ## Referencias
 
-- [Referencias del curso](https://0xmrivas.github.io/material-DWEC/docs/referencias)
+- [Referencias del curso](https://0xmrivas.github.io/Dise-o-de-Interfaces-Web/docs/referencias)
 
 ## Proyectos
-- [Proyectos del curso](https://0xmrivas.github.io/material-DWEC/docs/proyectos/)
+- [Proyectos del curso](https://0xmrivas.github.io/Dise-o-de-Interfaces-Web/docs/proyectos/)
