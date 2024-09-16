@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/logo-blanco.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#proyecto-1-explorando-los-fundamentos-del-desarrollo-web-en-entornos-de-cliente" class="md-skip">
+        <a href="#proyecto-1-prototipado-y-diseno-de-una-interfaz-web-con-figma" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -95,7 +95,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -123,7 +123,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
       </label>
     
   
@@ -133,7 +133,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
       </label>
     
   
@@ -141,13 +141,13 @@
       
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -156,21 +156,21 @@
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Buscar">
         
         <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Inicializando búsqueda
@@ -238,57 +238,6 @@
     
   
   Proyecto 2
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../proyecto3/" class="md-tabs__link">
-        
-  
-    
-  
-  Proyecto 3
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../proyecto4/" class="md-tabs__link">
-        
-  
-    
-  
-  Proyecto 4
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../proyecto6/" class="md-tabs__link">
-        
-  
-    
-  
-  Proyecto 6
 
       </a>
     </li>
@@ -408,64 +357,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#fundamentacion-teorica" class="md-nav__link">
+  <a href="#objetivo-general" class="md-nav__link">
     <span class="md-ellipsis">
-      Fundamentación teórica
+      Objetivo general
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#objetivos-del-proyecto" class="md-nav__link">
+  <a href="#resultados-de-aprendizaje-y-criterios-de-evaluacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivos del Proyecto
+      Resultados de aprendizaje y Criterios de evaluación
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#descripcion-del-proyecto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Descripción del Proyecto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#formato-y-entrega" class="md-nav__link">
-    <span class="md-ellipsis">
-      Formato y entrega
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Formato y entrega">
+    <nav class="md-nav" aria-label="Resultados de aprendizaje y Criterios de evaluación">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#documento-resultado-de-la-investigacion" class="md-nav__link">
+  <a href="#ra1-planifica-la-creacion-de-una-interfaz-web-valorando-y-aplicando-especificaciones-de-diseno" class="md-nav__link">
     <span class="md-ellipsis">
-      Documento resultado de la investigación.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#presentacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Presentación
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#como-hago-la-entrega" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Cómo hago la entrega?
+      RA1 Planifica la creación de una interfaz web valorando y aplicando especificaciones de diseño.
     </span>
   </a>
   
@@ -477,64 +390,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluacion-del-proyecto" class="md-nav__link">
+  <a href="#que-tengo-que-hacer-en-este-proyecto" class="md-nav__link">
     <span class="md-ellipsis">
-      Evaluación del proyecto
+      ¿Qué tengo que hacer en este proyecto?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Evaluación del proyecto">
+    <nav class="md-nav" aria-label="¿Qué tengo que hacer en este proyecto?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1a-se-han-caracterizado-y-diferenciado-los-modelos-de-ejecucion-de-codigo-en-el-servidor-y-en-el-cliente-web" class="md-nav__link">
+  <a href="#proyecto-aplicacion-web" class="md-nav__link">
     <span class="md-ellipsis">
-      1a) Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente Web.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1b-se-han-identificado-las-capacidades-y-mecanismos-de-ejecucion-de-codigo-de-los-navegadores-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      1b) Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores Web.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1c-se-han-identificado-y-caracterizado-los-principales-lenguajes-relacionados-con-la-programacion-de-clientes-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      1c) Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes Web.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1d-se-han-reconocido-las-particularidades-de-la-programacion-de-guiones-y-sus-ventajas-y-desventajas-sobre-la-programacion-tradicional" class="md-nav__link">
-    <span class="md-ellipsis">
-      1d) Se han reconocido las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1e-se-han-verificado-los-mecanismos-de-integracion-de-los-lenguajes-de-marcas-con-los-lenguajes-de-programacion-de-clientes-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      1e) Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes Web.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1f-se-han-reconocido-y-evaluado-las-herramientas-de-programacion-sobre-clientes-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      1f) Se han reconocido y evaluado las herramientas de programación sobre clientes Web.
+      Proyecto Aplicación Web
     </span>
   </a>
   
@@ -546,11 +414,128 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nota-propiedad-intelectual" class="md-nav__link">
+  <a href="#libertad-creativa" class="md-nav__link">
     <span class="md-ellipsis">
-      Nota: Propiedad intelectual
+      Libertad Creativa
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-de-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guía de actividades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guía de actividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-analisis-de-los-principios-de-comunicacion-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Análisis de los principios de comunicación visual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-seleccion-de-colores-y-tipografias" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Selección de colores y tipografías
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-wireframes-de-baja-fidelidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Wireframes de baja fidelidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-definicion-de-la-guia-de-estilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Definición de la guía de estilo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-prototipado-de-alta-fidelidad-en-figma" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Prototipado de alta fidelidad en Figma
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos del Proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega final
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrega final">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debeis-entregar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debéis entregar:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calificación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calificación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ra1" class="md-nav__link">
+    <span class="md-ellipsis">
+      RA1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -574,66 +559,6 @@
   
   <span class="md-ellipsis">
     Proyecto 2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../proyecto3/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Proyecto 3
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../proyecto4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Proyecto 4
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../proyecto6/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Proyecto 6
   </span>
   
 
@@ -671,64 +596,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#fundamentacion-teorica" class="md-nav__link">
+  <a href="#objetivo-general" class="md-nav__link">
     <span class="md-ellipsis">
-      Fundamentación teórica
+      Objetivo general
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#objetivos-del-proyecto" class="md-nav__link">
+  <a href="#resultados-de-aprendizaje-y-criterios-de-evaluacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivos del Proyecto
+      Resultados de aprendizaje y Criterios de evaluación
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#descripcion-del-proyecto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Descripción del Proyecto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#formato-y-entrega" class="md-nav__link">
-    <span class="md-ellipsis">
-      Formato y entrega
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Formato y entrega">
+    <nav class="md-nav" aria-label="Resultados de aprendizaje y Criterios de evaluación">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#documento-resultado-de-la-investigacion" class="md-nav__link">
+  <a href="#ra1-planifica-la-creacion-de-una-interfaz-web-valorando-y-aplicando-especificaciones-de-diseno" class="md-nav__link">
     <span class="md-ellipsis">
-      Documento resultado de la investigación.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#presentacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Presentación
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#como-hago-la-entrega" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Cómo hago la entrega?
+      RA1 Planifica la creación de una interfaz web valorando y aplicando especificaciones de diseño.
     </span>
   </a>
   
@@ -740,64 +629,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluacion-del-proyecto" class="md-nav__link">
+  <a href="#que-tengo-que-hacer-en-este-proyecto" class="md-nav__link">
     <span class="md-ellipsis">
-      Evaluación del proyecto
+      ¿Qué tengo que hacer en este proyecto?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Evaluación del proyecto">
+    <nav class="md-nav" aria-label="¿Qué tengo que hacer en este proyecto?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1a-se-han-caracterizado-y-diferenciado-los-modelos-de-ejecucion-de-codigo-en-el-servidor-y-en-el-cliente-web" class="md-nav__link">
+  <a href="#proyecto-aplicacion-web" class="md-nav__link">
     <span class="md-ellipsis">
-      1a) Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente Web.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1b-se-han-identificado-las-capacidades-y-mecanismos-de-ejecucion-de-codigo-de-los-navegadores-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      1b) Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores Web.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1c-se-han-identificado-y-caracterizado-los-principales-lenguajes-relacionados-con-la-programacion-de-clientes-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      1c) Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes Web.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1d-se-han-reconocido-las-particularidades-de-la-programacion-de-guiones-y-sus-ventajas-y-desventajas-sobre-la-programacion-tradicional" class="md-nav__link">
-    <span class="md-ellipsis">
-      1d) Se han reconocido las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1e-se-han-verificado-los-mecanismos-de-integracion-de-los-lenguajes-de-marcas-con-los-lenguajes-de-programacion-de-clientes-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      1e) Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes Web.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1f-se-han-reconocido-y-evaluado-las-herramientas-de-programacion-sobre-clientes-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      1f) Se han reconocido y evaluado las herramientas de programación sobre clientes Web.
+      Proyecto Aplicación Web
     </span>
   </a>
   
@@ -809,11 +653,128 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nota-propiedad-intelectual" class="md-nav__link">
+  <a href="#libertad-creativa" class="md-nav__link">
     <span class="md-ellipsis">
-      Nota: Propiedad intelectual
+      Libertad Creativa
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-de-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guía de actividades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guía de actividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-analisis-de-los-principios-de-comunicacion-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Análisis de los principios de comunicación visual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-seleccion-de-colores-y-tipografias" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Selección de colores y tipografías
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-wireframes-de-baja-fidelidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Wireframes de baja fidelidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-definicion-de-la-guia-de-estilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Definición de la guía de estilo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-prototipado-de-alta-fidelidad-en-figma" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Prototipado de alta fidelidad en Figma
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos del Proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrega final
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrega final">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debeis-entregar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debéis entregar:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calificación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calificación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ra1" class="md-nav__link">
+    <span class="md-ellipsis">
+      RA1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -832,335 +793,148 @@
                   
 
 
-<h1 id="proyecto-1-explorando-los-fundamentos-del-desarrollo-web-en-entornos-de-cliente">Proyecto 1: Explorando los Fundamentos del Desarrollo Web en Entornos de Cliente</h1>
+<h1 id="proyecto-1-prototipado-y-diseno-de-una-interfaz-web-con-figma">Proyecto 1: Prototipado y Diseño de una Interfaz Web con Figma</h1>
 <p><center>
-<img alt="" src="../assets/proyecto1.jpeg" />
+<img alt="" src="../assets/proyecto1.webp" />
 </center></p>
-<h2 id="fundamentacion-teorica">Fundamentación teórica</h2>
-<p>En el mundo actual, el desarrollo web en entornos de cliente es esencial para la creación de aplicaciones web modernas y dinámicas. Este proyecto de investigación tiene como objetivo explorar los conceptos clave que subyacen en este campo, desde los modelos de programación hasta las herramientas de programación utilizadas en la actualidad.</p>
-<h2 id="objetivos-del-proyecto">Objetivos del Proyecto</h2>
+<h2 id="objetivo-general">Objetivo general</h2>
+<p>El objetivo es planificar, prototipar y diseñar una interfaz web accesible, aplicando principios de comunicación visual, seleccionando tipografías y colores adecuados, y utilizando tecnologías actuales para crear una plantilla de diseño reutilizable.</p>
+<h2 id="resultados-de-aprendizaje-y-criterios-de-evaluacion">Resultados de aprendizaje y Criterios de evaluación</h2>
+<h3 id="ra1-planifica-la-creacion-de-una-interfaz-web-valorando-y-aplicando-especificaciones-de-diseno">RA1 Planifica la creación de una interfaz web valorando y aplicando especificaciones de diseño.</h3>
+<p><strong>Criterios de evaluación:</strong>
+- Se ha reconocido la importancia de la comunicación visual y sus principios básicos.
+- Se han analizado y seleccionado los colores y tipografías adecuados para su visualización en pantalla.
+- Se han analizado alternativas para la presentación de la información en documentos web.
+- Se ha valorado la importancia de definir y aplicar la guía de estilo en el desarrollo de una aplicación web.
+- Se han utilizado y valorado distintas tecnologías para el diseño de documentos web.
+- Se han creado y utilizado plantillas de diseño.</p>
+<h2 id="que-tengo-que-hacer-en-este-proyecto">¿Qué tengo que hacer en este proyecto?</h2>
+<h3 id="proyecto-aplicacion-web">Proyecto Aplicación Web</h3>
+<p>Este proyecto es el inicio y la base para aplicar un proyecto de desarrollo web conjunto con cliente. Puedes elegir desarrollar cualquier tipo de aplicación web, siempre que cumpla con ciertos criterios técnicos y de diseño. Ten en cuenta que necesitará ciertas funcionalidades más complejas que se usarán y evaluarán a futuro en el módulo de DWEC. La creatividad y la innovación son claves aquí, así que te animamos a pensar en una aplicación que no solo demuestre tus habilidades técnicas, sino que también refleje tus intereses personales o profesionales.</p>
+<h2 id="libertad-creativa">Libertad Creativa</h2>
+<p>La esencia de este proyecto es la libertad creativa. Puedes elegir el tipo de aplicación web que quieras desarrollar, siempre y cuando utilices <strong>Vue.js</strong> como framework principal. Para comenzar, aquí tienes algunas ideas de proyectos:</p>
 <ul>
-<li>
-<p>Investigar y comprender los diferentes modelos de programación en entornos cliente/servidor y su aplicación en el desarrollo web.</p>
-</li>
-<li>
-<p>Analizar los mecanismos utilizados para ejecutar código en un navegador web y su relevancia en el desarrollo web moderno.</p>
-</li>
-<li>
-<p>Evaluar las capacidades y limitaciones de la ejecución en el navegador, así como la compatibilidad con diferentes navegadores web.</p>
-</li>
-<li>
-<p>Comparar las características de los lenguajes de script con la programación tradicional, destacando sus ventajas y desventajas.</p>
-</li>
-<li>
-<p>Explorar las tecnologías y lenguajes asociados al desarrollo web en entornos de cliente y su papel en la creación de aplicaciones web.</p>
-</li>
-<li>
-<p>Estudiar cómo se integra el código con las etiquetas HTML y su influencia en la experiencia del usuario.</p>
-</li>
-<li>
-<p>Investigar y utilizar diversas herramientas de programación que facilitan el desarrollo web en entornos de cliente.</p>
-</li>
+<li><strong>Ecommerce platform:</strong> Desarrolla un sitio de comercio electrónico con carrito de compras, búsqueda de productos y sistema de valoraciones.</li>
+<li><strong>Plataforma Educativa:</strong> Crea una plataforma para cursos en línea, con lecciones, quizzes y seguimiento del progreso.</li>
+<li><strong>Gestor de Tareas:</strong> Un sistema para organizar tareas y proyectos personales o de equipo, con funcionalidades de añadir, editar, eliminar y clasificar tareas.</li>
+<li><strong>Red Social Temática:</strong> Una red social enfocada en un tema específico (ej: libros, viajes, gastronomía), con perfiles de usuario, publicaciones y sistema de amigos o seguidores.</li>
+<li><strong>Blog Personalizado:</strong> Un blog donde los usuarios pueden escribir, publicar y compartir artículos, con la posibilidad de comentar y dar 'me gusta' a las publicaciones.</li>
+<li><strong>Portal de Noticias:</strong> Un sitio web de noticias con categorías, comentarios y un sistema para clasificar noticias por popularidad o actualidad.</li>
+<li><strong>Aplicación de Reservas:</strong> Un sistema para reservar servicios o eventos, como citas en salones de belleza, reservas en restaurantes o inscripciones a eventos.</li>
 </ul>
-<h2 id="descripcion-del-proyecto">Descripción del Proyecto</h2>
-<p><strong>Parte 1</strong> - Modelos de Programación en Entornos Cliente/Servidor:</p>
+<h2 id="guia-de-actividades">Guía de actividades</h2>
+<h3 id="1-analisis-de-los-principios-de-comunicacion-visual">1. Análisis de los principios de comunicación visual</h3>
+<p><strong>Descripción:</strong> Los estudiantes investigan y aplican principios básicos del diseño de interfaces web.<br />
+<strong>Producto:</strong> Moodboard en Figma que refleje el uso de estos principios, visualizando ejemplos concretos aplicables al proyecto.</p>
+<h3 id="2-seleccion-de-colores-y-tipografias">2. Selección de colores y tipografías</h3>
+<p><strong>Descripción:</strong> Selección de una paleta de colores accesibles y tipografías legibles para pantallas, cumpliendo con los requisitos de contraste y accesibilidad.<br />
+<strong>Producto:</strong> Biblioteca de estilos en Figma que incluya colores, tipografías y componentes básicos del diseño.</p>
+<h3 id="3-wireframes-de-baja-fidelidad">3. Wireframes de baja fidelidad</h3>
+<p><strong>Descripción:</strong> Creación de wireframes en Figma para explorar opciones de estructura y layout, analizando alternativas de presentación de la información.<br />
+<strong>Producto:</strong> Serie de wireframes que representen la estructura básica de la aplicación, priorizando la experiencia de usuario.</p>
+<h3 id="4-definicion-de-la-guia-de-estilo">4. Definición de la guía de estilo</h3>
+<p><strong>Descripción:</strong> Elaboración de una guía de estilo en Figma con pautas sobre colores, tipografía, iconos, botones y espaciado.<br />
+<strong>Producto:</strong> Guía de estilo detallada en Figma que servirá como referencia para la maquetación y desarrollo.</p>
+<h3 id="5-prototipado-de-alta-fidelidad-en-figma">5. Prototipado de alta fidelidad en Figma</h3>
+<p><strong>Descripción:</strong> Construcción del prototipo interactivo en Figma que integre los wireframes, la guía de estilo y componentes reutilizables.<br />
+<strong>Producto:</strong> Prototipo navegable de alta fidelidad en Figma para pruebas de usabilidad. Añadir a vuestro equipo en Figma: acarmar112@g.educaand.es.</p>
+<h2 id="requisitos-del-proyecto">Requisitos del Proyecto</h2>
+<p>El proyecto debe cumplir los siguientes criterios fundamentales:</p>
+<ol>
+<li><strong>Integración con API:</strong> La aplicación debe interactuar con al menos una API externa (RESTful, GraphQL, etc.).</li>
+<li><strong>Autenticación y Autorización:</strong> Integrar un sistema de autenticación y gestión de sesiones.</li>
+<li><strong>Responsive Design:</strong> La aplicación debe ser accesible en diferentes dispositivos.</li>
+<li><strong>Calidad del Código:</strong> Código limpio, bien organizado, siguiendo buenas prácticas.</li>
+<li><strong>Documentación y Despliegue:</strong> Documentación adecuada y despliegue en plataformas como Netlify, Vercel o GitHub Pages.</li>
+</ol>
+<h2 id="entrega-final">Entrega final</h2>
+<h3 id="debeis-entregar">Debéis entregar:</h3>
 <ul>
-<li>Investigación de los modelos cliente/servidor más comunes.</li>
-<li>Identificación de ejemplos de aplicaciones que utilizan cada modelo.</li>
+<li>Los archivos del proyecto completo en GitHub.</li>
+<li>El proyecto en Figma.</li>
+<li>Un documento con la información recogida del proyecto y el informe de accesibilidad.</li>
 </ul>
-<!-- Contenido: Modelos de programación en entornos cliente/servidor.
-Criterio: a) Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente Web. -->
-
-<p><strong>Parte 2</strong> - Mecanismos de Ejecución de Código en un Navegador Web. Capacidades y Limitaciones de Ejecución. Compatibilidad con Navegadores Web:</p>
-<ul>
-<li>Estudio de cómo se ejecuta el código JavaScript en un navegador.</li>
-<li>Evaluación de las diferencias de compatibilidad entre navegadores.</li>
-<li>Resolución de problemas de compatibilidad en una aplicación web.</li>
-</ul>
-<!-- Contenido: Mecanismos de Ejecución de Código en un Navegador Web.
-Criterio: b) Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores Web. -->
-
-<p><strong>Parte 3</strong> - Lenguajes de Programación en Entorno Cliente.</p>
-<ul>
-<li>Investigación de lenguajes como JavaScript, TypeScript, y otros.</li>
-<li>Comparación de sus características y aplicaciones.</li>
-</ul>
-<!-- Contenido: Lenguajes de programación en entorno cliente.
-Criterio: c) Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes Web. -->
-
-<p><strong>Parte 4</strong> - Características de los Lenguajes de Script. Ventajas y Desventajas:</p>
-<ul>
-<li>Análisis de las ventajas y desventajas de la programación en lenguajes de script sobre la programación tradicional.</li>
-</ul>
-<!-- Contenido: Características de los lenguajes de script. Ventajas y desventajas sobre la programación tradicional.
-Criterio: d) Se han reconocido las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional. -->
-
-<p><strong>Parte 5</strong> - Tecnologías y Lenguajes Asociados. Integración del Código con las Etiquetas HTML:</p>
-<ul>
-<li>Exploración de tecnologías como CSS y HTML5.</li>
-<li>Creación de una pequeña aplicación web integrando código JavaScript de diferentes maneras.</li>
-</ul>
-<!-- Contenido: Integración del código con las etiquetas HTML.
-Criterio: e) Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes Web. -->
-
-<p><strong>Parte 6</strong> - Herramientas de Programación:</p>
-<ul>
-<li>Uso de herramientas como Visual Studio Code, Chrome DevTools, etc.</li>
-</ul>
-<!-- Contenido: Herramientas de programación.
-Criterio: f) Se han reconocido y evaluado las herramientas de programación sobre clientes Web. -->
-
-<h2 id="formato-y-entrega">Formato y entrega</h2>
-<p>Cada fase de investigación se plasmará en un documento y culminará en una presentación que resuma los hallazgos y las conclusiones. La entrega se realizará mediante la tarea habilitada en Moodle Centros llamada Proyecto 1 siguiendo la siguiente pauta:</p>
-<h3 id="documento-resultado-de-la-investigacion">Documento resultado de la investigación.</h3>
-<ul>
-<li>Se valorará positivamente que sea realizado en markdown y publicado en el github del alumno/-a.</li>
-<li>Extensión máxima 10 páginas (sin incluir portada, índice y bibliografía).</li>
-</ul>
-<h3 id="presentacion">Presentación</h3>
-<ul>
-<li>Se valorará positivamente que sea realizado en markdown y publicado en el github del alumno/-a.</li>
-<li>Extensión máxima 2 slides por apartado (sin incluir portada, índice y bibliografía).</li>
-</ul>
-<h3 id="como-hago-la-entrega">¿Cómo hago la entrega?</h3>
-<ul>
-<li>
-<p>En el caso de que el alumno/-a opte por la entrega en formato markdown, se deberá entregar un fichero de texto con los enlaces al repositorio. El archivo de texto se debe nombrar, "Px_ApellidosNombre_DWEC" (donde x es el número del proyecto).</p>
-</li>
-<li>
-<p>En caso contrario se entregará un archivo .zip que debe contener un archivo en formato PDF por cada una de las dos partes de la actividad (documento y presentación). El archivo de texto se debe nombrar, "Px_ApellidosNombre_DWEC" (donde x es el número del proyecto).</p>
-</li>
-</ul>
-<p><strong>Algunas aclaraciones:</strong></p>
-<ul>
-<li>Las respuestas sin justificación, que sean una copia de una fuente de información y/o que no contengan las referencias utilizadas, no recibirán puntuación. (véase la nota sobre propiedad intelectual al final del documento)</li>
-<li>Las referencias contenidas en el apartado "bibliografía" solo se valorarán en el caso de que hayan sido utilizadas en la redacción del documento.</li>
-</ul>
-<h2 id="evaluacion-del-proyecto">Evaluación del proyecto</h2>
-<p>Mediante este proyecto se evalúan los siguientes criterios de evaluación:</p>
-<h4 id="1a-se-han-caracterizado-y-diferenciado-los-modelos-de-ejecucion-de-codigo-en-el-servidor-y-en-el-cliente-web">1a) Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente Web.</h4>
+<p><strong>Revisión:</strong> Se realizará una presentación del proyecto.</p>
+<h2 id="calificacion">Calificación</h2>
+<h3 id="ra1">RA1</h3>
 <table>
 <thead>
 <tr>
-<th>Descriptores</th>
-<th>Bien</th>
-<th>Regular</th>
-<th>Insuficiente</th>
+<th><strong>CE</strong></th>
+<th>10 excelente</th>
+<th>8 notable</th>
+<th>6 bien</th>
+<th>4 necesita mejorar</th>
+<th>2 insuficiente</th>
+<th>0 no asiste</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Caracterización y diferenciación de modelos de ejecución de código (5pt)</strong></td>
-<td>Proporciona una descripción detallada de los modelos de ejecución y destaca sus diferencias clave (5pt)</td>
-<td>Ofrece una descripción adecuada de los modelos, pero puede mejorar la claridad o exhaustividad (2,5pt)</td>
-<td>La descripción de los modelos es insuficiente o confusa (0pt)</td>
+<td>a) Se ha reconocido la importancia de la comunicación visual y sus principios básicos (0,5%)</td>
+<td>Se ha reconocido de forma excelente</td>
+<td>Se han reconocido de forma correcta</td>
+<td>Se han definido con ayuda</td>
+<td>Se han reconocido con errores</td>
+<td>Se han reconocido con bastantes errores</td>
+<td>No asiste o no evaluable</td>
 </tr>
 <tr>
-<td><strong>Ejemplos concretos y relevantes para ilustrar los modelos de ejecución (4pt)</strong></td>
-<td>Proporciona ejemplos pertinentes y relevantes para ilustrar los modelos de ejecución, y están bien integrados en la explicación (4pt)</td>
-<td>Los ejemplos son adecuados, pero podrían ser más relevantes o estar mejor relacionados con los modelos (2pt)</td>
-<td>Los ejemplos son inadecuados o están ausentes (0pt)</td>
+<td>b) Se han analizado y seleccionado los colores y tipografías adecuados para su visualización en pantalla (2%)</td>
+<td>Se han analizado y seleccionado de forma excelente, justificando dicha selección</td>
+<td>Se han analizado y seleccionado de forma correcta</td>
+<td>Se han analizado con algún error</td>
+<td>Se han analizado con errores</td>
+<td>Se han analizado con grandes errores</td>
+<td>No asiste o no evaluable</td>
 </tr>
 <tr>
-<td><strong>Referencias relevantes a fuentes académicas o profesionales para respaldar la caracterización (1pt)</strong></td>
-<td>Incluye múltiples referencias apropiadas y las cita correctamente (1pt)</td>
-<td>Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt)</td>
-<td>Carece de referencias o las referencias son inadecuadas o incorrectas (0pt)</td>
+<td>c) Se han analizado alternativas para la presentación de la información en documentos web (1%)</td>
+<td>Se han analizado sin errores, justificando su aplicación con lenguaje técnico</td>
+<td>Se han analizado sin errores, con una justificación adecuada</td>
+<td>Se han analizado con algún error</td>
+<td>Se ha documentado de forma escueta</td>
+<td>Se han analizado con grandes errores</td>
+<td>No asiste o no evaluable</td>
+</tr>
+<tr>
+<td>d) Se ha valorado la importancia de definir y aplicar la guía de estilo (1%)</td>
+<td>Se ha valorado de forma clara y con lenguaje técnico</td>
+<td>Se ha valorado de forma correcta</td>
+<td>Se ha valorado de forma correcta pero incompleta</td>
+<td>Se ha valorado de manera superficial</td>
+<td>No se ha valorado</td>
+<td>No asiste o no evaluable</td>
+</tr>
+<tr>
+<td>e) Se han utilizado tecnologías para el diseño de documentos Web (2%)</td>
+<td>Se han utilizado tecnologías avanzadas de forma excelente</td>
+<td>Se han utilizado de forma correcta</td>
+<td>Se han utilizado con algún error</td>
+<td>Se han utilizado con errores</td>
+<td>Se han utilizado con grandes errores</td>
+<td>No asiste o no evaluable</td>
+</tr>
+<tr>
+<td>f) Se han utilizado marcos, tablas y capas para presentar la información de manera ordenada (2%)</td>
+<td>Se han utilizado elementos HTML5 de forma autónoma y justificada</td>
+<td>Se han utilizado de forma correcta y sin justificar</td>
+<td>Se han utilizado con pequeños errores</td>
+<td>Se han utilizado con varios errores</td>
+<td>Se han utilizado de manera incorrecta</td>
+<td>No asiste o no evaluable</td>
+</tr>
+<tr>
+<td>g) Se han creado y utilizado plantillas de diseño (11%)</td>
+<td>Se han creado plantillas de forma excelente y ajustada a las instrucciones</td>
+<td>Se han creado de forma correcta y ajustada</td>
+<td>Se han creado con pequeños errores</td>
+<td>Se han creado con errores importantes</td>
+<td>Se han creado con grandes fallos</td>
+<td>No asiste o no evaluable</td>
 </tr>
 </tbody>
 </table>
-<h4 id="1b-se-han-identificado-las-capacidades-y-mecanismos-de-ejecucion-de-codigo-de-los-navegadores-web">1b) Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores Web.</h4>
-<table>
-<thead>
-<tr>
-<th>Descriptores</th>
-<th>Bien</th>
-<th>Regular</th>
-<th>Insuficiente</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Identificación de las capacidades y mecanismos de ejecución de código en los navegadores Web (3pt)</strong></td>
-<td>Proporciona una descripción exhaustiva y precisa de las capacidades y mecanismos (3pt)</td>
-<td>Ofrece una descripción adecuada, pero puede haber omisiones o imprecisiones menores (1,5pt)</td>
-<td>La descripción es insuficiente o inexacta en varios aspectos (0pt)</td>
-</tr>
-<tr>
-<td><strong>Relevancia de las capacidades y mecanismos en el contexto del desarrollo web moderno (3pt)</strong></td>
-<td>Explica la relevancia de las capacidades y mecanismos en el contexto del desarrollo web moderno, demostrando una comprensión clara de la importancia de estas capacidades y mecanismos (3pt)</td>
-<td>Comprende la relevancia, pero podría profundizar en su explicación (1,5pt)</td>
-<td>No demuestra una comprensión adecuada de la relevancia (0pt)</td>
-</tr>
-<tr>
-<td><strong>Ejemplos utilizados para ilustrar las capacidades y mecanismos identificados (3pt)</strong></td>
-<td>Utiliza ejemplos concretos y relevantes para ilustrar las capacidades y mecanismos identificados, son pertinentes y están bien integrados en la explicación (3pt)</td>
-<td>Los ejemplos son adecuados, pero podrían ser más relevantes o estar mejor relacionados con los temas (1,5pt)</td>
-<td>Los ejemplos son inadecuados o están ausentes (0pt)</td>
-</tr>
-<tr>
-<td><strong>Referencias relevantes a fuentes académicas o profesionales para respaldar la caracterización (1pt)</strong></td>
-<td>Incluye múltiples referencias apropiadas y las cita correctamente (1pt)</td>
-<td>Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt)</td>
-<td>Carece de referencias o las referencias son inadecuadas o incorrectas (0pt)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="1c-se-han-identificado-y-caracterizado-los-principales-lenguajes-relacionados-con-la-programacion-de-clientes-web">1c) Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes Web.</h4>
-<table>
-<thead>
-<tr>
-<th>Descriptores</th>
-<th>Bien</th>
-<th>Regular</th>
-<th>Insuficiente</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Identificación de lenguajes relacionados con la programación de clientes Web (3pt)</strong></td>
-<td>Proporciona una lista exhaustiva y precisa de los lenguajes clave (3pt)</td>
-<td>Ofrece una lista adecuada, pero puede haber omisiones o imprecisiones menores (1,5pt)</td>
-<td>La lista es insuficiente o inexacta en varios aspectos (0pt)</td>
-</tr>
-<tr>
-<td><strong>Explicación de las aplicaciones y características distintivas de cada lenguaje identificado (3pt)</strong></td>
-<td>Explica correctamente aplicaciones y características distintivas de cada lenguaje identificado (3pt)</td>
-<td>Comprende las aplicaciones, pero podría profundizar en su explicación (1,5pt)</td>
-<td>No demuestra una comprensión adecuada de las aplicaciones y características (0pt)</td>
-</tr>
-<tr>
-<td><strong>Ejemplos utilizados para ilustrar los lenguajes de programación identificados (3pt)</strong></td>
-<td>Los ejemplos son pertinentes y están bien integrados en la explicación (3pt)</td>
-<td>Los ejemplos son adecuados, pero podrían ser más relevantes o estar mejor relacionados con los lenguajes (1,5pt)</td>
-<td>Los ejemplos son inadecuados o están ausentes (0pt)</td>
-</tr>
-<tr>
-<td><strong>Referencias relevantes a fuentes académicas o profesionales para respaldar la caracterización (1pt)</strong></td>
-<td>Incluye múltiples referencias apropiadas y las cita correctamente (1pt)</td>
-<td>Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt)</td>
-<td>Carece de referencias o las referencias son inadecuadas o incorrectas (0pt)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="1d-se-han-reconocido-las-particularidades-de-la-programacion-de-guiones-y-sus-ventajas-y-desventajas-sobre-la-programacion-tradicional">1d) Se han reconocido las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional.</h4>
-<table>
-<thead>
-<tr>
-<th>Descriptores</th>
-<th>Bien</th>
-<th>Regular</th>
-<th>Insuficiente</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional (3pt)</strong></td>
-<td>Reconoce de manera clara y completa las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional. Proporciona una descripción exhaustiva y precisa de las particularidades, ventajas y desventajas (3pt)</td>
-<td>Ofrece una descripción adecuada, pero puede haber omisiones o imprecisiones menores (1,5pt)</td>
-<td>La descripción es insuficiente o inexacta en varios aspectos (0pt)</td>
-</tr>
-<tr>
-<td><strong>Aplicabilidad de la programación de guiones en situaciones específicas y sus beneficios (3pt)</strong></td>
-<td>Explica claramente la aplicabilidad de la programación de guiones en situaciones específicas y sus beneficios (3pt)</td>
-<td>Comprende la aplicabilidad, pero podría profundizar en su explicación (1,5pt)</td>
-<td>No demuestra una comprensión adecuada de la aplicabilidad y beneficios (0pt)</td>
-</tr>
-<tr>
-<td><strong>Ejemplos utilizados para ilustrar ventajas y desventajas (3pt)</strong></td>
-<td>Los ejemplos son pertinentes y están bien integrados en la explicación (3pt)</td>
-<td>Los ejemplos son adecuados, pero podrían ser más relevantes (1,5pt)</td>
-<td>Los ejemplos son inadecuados o están ausentes (0pt)</td>
-</tr>
-<tr>
-<td><strong>Referencias relevantes a fuentes académicas o profesionales para respaldar la caracterización (1pt)</strong></td>
-<td>Incluye múltiples referencias apropiadas y las cita correctamente (1pt)</td>
-<td>Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt)</td>
-<td>Carece de referencias o las referencias son inadecuadas o incorrectas (0pt)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="1e-se-han-verificado-los-mecanismos-de-integracion-de-los-lenguajes-de-marcas-con-los-lenguajes-de-programacion-de-clientes-web">1e) Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes Web.</h4>
-<table>
-<thead>
-<tr>
-<th>Descriptores</th>
-<th>Bien</th>
-<th>Regular</th>
-<th>Insuficiente</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes Web (3pt)</strong></td>
-<td>Proporciona una descripción exhaustiva y precisa de los diferentes mecanismos de integración (3pt)</td>
-<td>Ofrece una descripción adecuada, pero puede haber omisiones o imprecisiones menores (1,5pt)</td>
-<td>La descripción es insuficiente o inexacta en varios aspectos (0pt)</td>
-</tr>
-<tr>
-<td><strong>Importancia de los mecanismos de integración en la creación de aplicaciones web efectivas (3pt)</strong></td>
-<td>Explica en profundidad la importancia de la importancia de estos mecanismos, demuestrando una comprensión clara (3pt)</td>
-<td>Comprende la relevancia, pero podría profundizar en su explicación (1,5pt)</td>
-<td>No demuestra una comprensión adecuada de la relevancia (0pt)</td>
-</tr>
-<tr>
-<td><strong>Ejemplos utilizados para ilustrar los mecanismos de integración identificados (3pt)</strong></td>
-<td>Los ejemplos son pertinentes y están bien integrados en la explicación (3pt)</td>
-<td>Los ejemplos son adecuados, pero podrían ser más relevantes (1,5pt)</td>
-<td>Los ejemplos son inadecuados o están ausentes (0pt)</td>
-</tr>
-<tr>
-<td><strong>Referencias relevantes a fuentes académicas o profesionales para respaldar la caracterización (1pt)</strong></td>
-<td>Incluye múltiples referencias apropiadas y las cita correctamente (1pt)</td>
-<td>Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt)</td>
-<td>Carece de referencias o las referencias son inadecuadas o incorrectas (0pt)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="1f-se-han-reconocido-y-evaluado-las-herramientas-de-programacion-sobre-clientes-web">1f) Se han reconocido y evaluado las herramientas de programación sobre clientes Web.</h4>
-<table>
-<thead>
-<tr>
-<th>Descriptores</th>
-<th>Bien</th>
-<th>Regular</th>
-<th>Insuficiente</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Herramientas de programación utilizadas en el desarrollo de clientes Web (3pt)</strong></td>
-<td>Proporciona una lista exhaustiva y precisa de las herramientas clave (3pt)</td>
-<td>Ofrece una lista adecuada, pero puede haber omisiones o imprecisiones menores (1,5pt)</td>
-<td>La lista es insuficiente o inexacta en varios aspectos (0pt)</td>
-</tr>
-<tr>
-<td><strong>Explica las funciones y ventajas distintivas de cada herramienta identificada (3pt)</strong></td>
-<td>Demuestra un conocimiento claro de las funciones y ventajas de las herramientas (3pt)</td>
-<td>Comprende las funciones, pero podría profundizar en su explicación (1,5pt)</td>
-<td>No demuestra una comprensión adecuada de las funciones y ventajas (0pt)</td>
-</tr>
-<tr>
-<td><strong>Ejemplos utilizados para ilustrar las herramientas de programación identificadas (3pt)</strong></td>
-<td>Los ejemplos son pertinentes y están bien integrados en la explicación (3pt)</td>
-<td>Los ejemplos son adecuados, pero podrían ser más relevantes (1,5pt)</td>
-<td>Los ejemplos son inadecuados o están ausentes (0pt)</td>
-</tr>
-<tr>
-<td><strong>Referencias relevantes a fuentes académicas o profesionales para respaldar la caracterización (1pt)</strong></td>
-<td>Incluye múltiples referencias apropiadas y las cita correctamente (1pt)</td>
-<td>Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt)</td>
-<td>Carece de referencias o las referencias son inadecuadas o incorrectas (0pt)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="nota-propiedad-intelectual">Nota: Propiedad intelectual</h2>
-<blockquote>
-<blockquote>
-<p>A menudo es inevitable, al escribir un documento, hacer uso de recursos creados por terceras personas. Es por tanto comprensible hacerlo en el marco de una práctica de nuestros estudios, siempre que esto se documente claramente y no suponga plagio en la práctica.</p>
-<p>Por lo tanto, al presentar una práctica que haga uso de recursos ajenos, se deberá referenciar claramente estos recursos, especificando el nombre de cada recurso, su autor, el lugar donde se obtuvo y el su estatus legal: si la obra está protegida por copyright o se acoge a alguna otra licencia de uso (Creative Commons, licencia GNU, GPL ...). El estudiante deberá asegurarse de que la licencia que sea no impide específicamente su uso en el marco de la práctica. En caso de no encontrar la información correspondiente deberá asumir que la obra está protegida por copyright.</p>
-</blockquote>
-</blockquote>
 
 
 
@@ -1188,7 +962,7 @@ Criterio: f) Se han reconocido y evaluado las herramientas de programación sobr
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
   Volver al principio
 </button>
         
@@ -1219,7 +993,7 @@ Criterio: f) Se han reconocido y evaluado las herramientas de programación sobr
     
     
     <a href="https://twitter.com/IESAlbertiCadiz" target="_blank" rel="noopener" title="IES Rafael Alberti en Twitter" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
     </a>
   
 </div>
@@ -1234,10 +1008,10 @@ Criterio: f) Se han reconocido y evaluado las herramientas de programación sobr
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
       
     
   </body>
