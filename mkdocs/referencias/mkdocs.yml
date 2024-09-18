@@ -1,5 +1,5 @@
 INHERIT: ../base.yml
-site_name: DWEC - Apuntes y referencias
+site_name: Diseño de Interfaces Web - Apuntes y referencias
 site_dir: ../../docs/referencias
 
 plugins:
