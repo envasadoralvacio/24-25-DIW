@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0d372af8-e268-411b-8b12-e6b48c8794cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs/referencias/docs/ud1.md" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs/referencias/docs/ud1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs/referencias/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs/referencias/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,7 @@
       <updated>1726660643811</updated>
       <workItem from="1726660645200" duration="154000" />
       <workItem from="1726667155283" duration="22000" />
-      <workItem from="1726671985234" duration="714000" />
+      <workItem from="1726671985234" duration="2007000" />
     </task>
     <task id="LOCAL-00001" summary="especificaciones del proyecto">
       <option name="closed" value="true" />
@@ -81,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726672250448</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Enlaces README.md">
+      <option name="closed" value="true" />
+      <created>1726672723753</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726672723753</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="especificaciones del proyecto" />
-    <option name="LAST_COMMIT_MESSAGE" value="especificaciones del proyecto" />
+    <MESSAGE value="Enlaces README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enlaces README.md" />
   </component>
 </project>
