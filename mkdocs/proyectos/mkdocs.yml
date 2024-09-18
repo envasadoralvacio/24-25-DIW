@@ -1,5 +1,5 @@
 INHERIT: ../base.yml
-site_name: DWEC - Proyectos
+site_name: Diseño de Interfaces Web - Proyectos
 site_dir: ../../docs/proyectos
   
 
@@ -23,7 +23,7 @@ plugins:
   - search:
       lang: es
   - with-pdf:
-      author: Equipo educativo de ciberseguridad del IES Rafael Alberti
+      author: Equipo educativo de 2ºDAW del IES Rafael Alberti
       copyright: CC BY-SA 4.0
       #
       cover: true
@@ -60,4 +60,4 @@ plugins:
       #show_anchors: true
     #verbose: true
 
-copyright: Contenido generado por el equipo educativo de ciberseguridad del IES Rafael Alberti
+copyright: Contenido generado por el equipo educativo de 2DAW del IES Rafael Alberti
