@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d372af8-e268-411b-8b12-e6b48c8794cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/mkdocs/referencias/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs/referencias/mkdocs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs/base.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs/base.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,7 @@
       <workItem from="1726660645200" duration="154000" />
       <workItem from="1726667155283" duration="22000" />
       <workItem from="1726671985234" duration="3019000" />
-      <workItem from="1726721671382" duration="3527000" />
+      <workItem from="1726721671382" duration="3597000" />
     </task>
     <task id="LOCAL-00001" summary="especificaciones del proyecto">
       <option name="closed" value="true" />
@@ -179,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726730487339</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Añadiendo menú">
+      <option name="closed" value="true" />
+      <created>1726730860321</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1726730860321</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +202,7 @@
     <MESSAGE value="Nuevo índice de unidades" />
     <MESSAGE value="Arreglo error section" />
     <MESSAGE value="Añadido CSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadido CSS" />
+    <MESSAGE value="Añadiendo menú" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadiendo menú" />
   </component>
 </project>

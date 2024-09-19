@@ -27,7 +27,7 @@ theme:
     - navigation.top
     - header.autohide
 daw_style:
-  - stylesheets/ddaw-style.css
+  - stylesheet/daw-style.css
 plugins:
 # Configuración de ejemplo, no se aplicará mientras que no se elimine este plugin de los .yml de cada proyecto
   - search:
