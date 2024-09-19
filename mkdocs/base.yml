@@ -6,7 +6,7 @@ theme:
   favicon: assets/logo-blanco.svg
   palette:
     - media: "(prefers-color-scheme: light)" 
-      scheme: default
+      scheme: daw-style
       primary: grey
       toggle:
         icon: material/toggle-switch-off-outline
