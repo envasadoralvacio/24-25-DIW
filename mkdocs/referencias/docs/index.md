@@ -17,14 +17,13 @@ Una vez dominadas las bases del lenguaje, nos centraremos en dos de las bibliote
 
 El módulo se organiza en las siguientes unidades, que se actualizarán a medida que avance el curso. Cada unidad incluye enlaces de referencia y recursos adicionales para facilitar tu aprendizaje:
 
-* [Unidad 1: Web Client Architectures and Technologies](ud1.md)
-* [Unidad 2: JavaScript fundamentals](ud2.md)
-* [Unidad 3: User-Defined Structures](ud3.md)
-* [Unidad 4: DOM manipulation and events](ud4.md)
-* [Unidad 5: React.js](ud5.md)
-* [Unidad 6: MERN Stack](ud6.md)
-* [Unidad 7: eCommerce Platform](ud7.md)
-* [Unidad 8: Vue.js](ud8.md)
+* [Unidad 1: Bienvenido/a a la agencia de publicidad](ud1.md)
+* [Unidad 2: Planificación y Prototipado de una interfaz web](ud2.md)
+* [Unidad 3: Testing de Usabilidad](ud3.md)
+* [Unidad 4: Desarrollando la interfaz web](ud4.md)
+* [Unidad 5: Testing en producción](ud5.md)
+* [Unidad 6: Diseño 2D, audio y video para videojuegos](ud6.md)
+* [Unidad 7: Elementos interactivos](ud7.md)
 
 ## Referencias web generales
 
