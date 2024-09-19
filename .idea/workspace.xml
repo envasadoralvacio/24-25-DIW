@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d372af8-e268-411b-8b12-e6b48c8794cf" name="Changes" comment="" />
+    <list default="true" id="0d372af8-e268-411b-8b12-e6b48c8794cf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/mkdocs/base.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs/base.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +89,7 @@
       <workItem from="1726660645200" duration="154000" />
       <workItem from="1726667155283" duration="22000" />
       <workItem from="1726671985234" duration="3019000" />
-      <workItem from="1726721671382" duration="2955000" />
+      <workItem from="1726721671382" duration="3090000" />
     </task>
     <task id="LOCAL-00001" summary="especificaciones del proyecto">
       <option name="closed" value="true" />
@@ -153,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726730050941</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Añadido CSS">
+      <option name="closed" value="true" />
+      <created>1726730278113</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726730278113</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
