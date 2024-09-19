@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d372af8-e268-411b-8b12-e6b48c8794cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mkdocs/proyectos/docs/stylesheet/daw-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs/base.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs/base.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mkdocs/referencias/docs/stylesheet/daw-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/alejandrocarmonamartos/Trabajo/2024-2025/Clases/Diseño de Interfaces Web/DIW... [alumnado]",
+    "last_opened_file_path": "/Users/alejandrocarmonamartos/Trabajo/2024-2025/Clases/Diseño de Interfaces Web/DIW... [alumnado]/mkdocs/referencias/docs",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -68,6 +66,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mkdocs/referencias/docs" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -86,7 +89,7 @@
       <workItem from="1726660645200" duration="154000" />
       <workItem from="1726667155283" duration="22000" />
       <workItem from="1726671985234" duration="3019000" />
-      <workItem from="1726721671382" duration="2089000" />
+      <workItem from="1726721671382" duration="2735000" />
     </task>
     <task id="LOCAL-00001" summary="especificaciones del proyecto">
       <option name="closed" value="true" />
@@ -136,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726723424012</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Añadido CSS">
+      <option name="closed" value="true" />
+      <created>1726723839279</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1726723839279</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +161,7 @@
     <MESSAGE value="Imagen de portada" />
     <MESSAGE value="Nuevo índice de unidades" />
     <MESSAGE value="Arreglo error section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arreglo error section" />
+    <MESSAGE value="Añadido CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadido CSS" />
   </component>
 </project>
