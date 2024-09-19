@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d372af8-e268-411b-8b12-e6b48c8794cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs/referencias/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs/referencias/docs/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,7 @@
       <workItem from="1726660645200" duration="154000" />
       <workItem from="1726667155283" duration="22000" />
       <workItem from="1726671985234" duration="3019000" />
-      <workItem from="1726721671382" duration="1544000" />
+      <workItem from="1726721671382" duration="1673000" />
     </task>
     <task id="LOCAL-00001" summary="especificaciones del proyecto">
       <option name="closed" value="true" />
@@ -112,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726722599932</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Nuevo índice de unidades">
+      <option name="closed" value="true" />
+      <created>1726723302576</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726723302576</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +130,7 @@
     <MESSAGE value="Enlaces README.md" />
     <MESSAGE value="Unidad 1" />
     <MESSAGE value="Imagen de portada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Imagen de portada" />
+    <MESSAGE value="Nuevo índice de unidades" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nuevo índice de unidades" />
   </component>
 </project>
